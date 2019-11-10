@@ -1,6 +1,6 @@
 package br.com.eliteconsult.materiais
 
-import base.Usuario
+import br.com.eliteconsult.seguranca.Usuario
 import br.com.eliteconsult.cadastros.CentroCusto
 
 class MovimentoMaterial {

@@ -1,8 +1,9 @@
 package br.com.eliteconsult.financeiro
 
+import base.FinanceiroBase
 import base.TipoFinanceiro
 
-class ContaReceber { //As propriedades da ContaReceber t�o dentro da classe pai FinanceiroBase
+class ContaReceber extends FinanceiroBase { //As propriedades da ContaReceber t�o dentro da classe pai FinanceiroBase
     //ent�o vamos l� na FinanceiroBase
     static hasMany = [itensContaReceber: ItemContaReceber]
 

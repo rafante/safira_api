@@ -1,8 +1,9 @@
 package br.com.eliteconsult.financeiro
 
+import base.FinanceiroBase
 import base.TipoFinanceiro
 
-public class ContaPagar {
+public class ContaPagar extends FinanceiroBase{
     Boolean boletoRecebido
 
     static hasMany = [itensContaPagar: ItemContaPagar]

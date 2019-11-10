@@ -1,8 +1,8 @@
 package br.com.eliteconsult.financeiro
 
-import br.com.eliteconsult.Cheque
+import base.CompensacaoItemFinanceiroBase
 
-class CompensacaoItemPagar {
+class CompensacaoItemPagar extends CompensacaoItemFinanceiroBase {
     static belongsTo = [itemContaPagar: ItemContaPagar, movimentoFinanceiro: MovimentoFinanceiro, cheque: Cheque]
 
     ItemContaPagar getParent() { return itemContaPagar }

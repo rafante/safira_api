@@ -1,7 +1,5 @@
 package br.com.eliteconsult.financeiro
 
-import br.com.eliteconsult.cadastros.Banco
-
 class ContaCorrente {
 
     String descricao

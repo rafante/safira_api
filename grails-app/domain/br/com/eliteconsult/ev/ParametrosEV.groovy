@@ -1,8 +1,8 @@
 package br.com.eliteconsult.ev
 
-import br.com.eliteconsult.ContaCorrente
-import br.com.eliteconsult.PlanoContas
 import br.com.eliteconsult.cadastros.CentroCusto
+import br.com.eliteconsult.financeiro.ContaCorrente
+import br.com.eliteconsult.financeiro.PlanoContas
 
 class ParametrosEV {
 

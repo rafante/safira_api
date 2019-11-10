@@ -1,8 +1,6 @@
 package base
 
-import com.br.asgardtecnologia.base.Persistente
-
-abstract class ProrrogacaoItemFinanceiroBase extends Persistente {
+abstract class ProrrogacaoItemFinanceiroBase {
     Date data = new Date()
     String justificativa
 

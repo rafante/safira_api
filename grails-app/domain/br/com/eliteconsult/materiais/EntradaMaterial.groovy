@@ -1,6 +1,6 @@
 package br.com.eliteconsult.materiais
 
-import base.Usuario
+import br.com.eliteconsult.seguranca.Usuario
 import br.com.eliteconsult.cadastros.CentroCusto
 import br.com.eliteconsult.cadastros.ParceiroNegocios
 import br.com.eliteconsult.cadastros.PrazoPagamento

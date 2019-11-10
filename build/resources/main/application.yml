@@ -10,7 +10,7 @@ grails:
             events: false
 info:
     app:
-        name: 'grails'
+        name: 'safira_api'
         version: '0.1'
         grailsVersion: '4.0.0.RC2'
 spring:

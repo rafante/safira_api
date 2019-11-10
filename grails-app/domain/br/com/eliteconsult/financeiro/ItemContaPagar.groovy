@@ -1,6 +1,8 @@
 package br.com.eliteconsult.financeiro
 
-class ItemContaPagar {
+import base.ItemFinanceiroBase
+
+public class ItemContaPagar extends ItemFinanceiroBase{
     static tipoMovimentoFinanceiro = TipoMovimentoFinanceiro.DEBITO
 
     static defaultFilterFields = "contaPagar.parceiroNegocios;dataVencimento;contaPagar.dataEmissao;compensadoCompletamente"
