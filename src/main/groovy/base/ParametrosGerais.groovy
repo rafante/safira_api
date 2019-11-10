@@ -1,0 +1,18 @@
+package base
+
+public class ParametrosGerais {
+
+    Boolean cpfCnpjObrigatorio = true
+
+    Boolean ignoreAjaxLoadingFilter = true
+    Boolean ignoreAjaxLoadingGrid = true
+    Boolean ignoreAjaxLoadingSelect = true
+
+    static constraints = {
+        cpfCnpjObrigatorio()
+        ignoreAjaxLoadingFilter()
+        ignoreAjaxLoadingGrid()
+        ignoreAjaxLoadingSelect()
+    }
+
+}
