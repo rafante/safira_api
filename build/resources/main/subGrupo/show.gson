@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.SubGrupo
+
+model {
+	SubGrupo subGrupo
+}
+
+json tmpl.subGrupo(subGrupo)

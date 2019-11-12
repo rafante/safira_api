@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.Grupo
+
+model {
+	Grupo grupo
+}
+
+json tmpl.grupo(grupo)

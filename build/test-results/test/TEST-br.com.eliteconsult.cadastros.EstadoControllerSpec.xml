@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.com.eliteconsult.cadastros.EstadoControllerSpec" tests="11" skipped="0" failures="6" errors="0" timestamp="2019-11-11T22:43:21" hostname="Brunos-MacBook-Pro.local" time="1.111">
+<testsuite name="br.com.eliteconsult.cadastros.EstadoControllerSpec" tests="11" skipped="0" failures="6" errors="0" timestamp="2019-11-12T03:14:15" hostname="Brunos-MacBook-Pro.local" time="0.839">
   <properties/>
-  <testcase name="Test the index action returns the correct response" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.535"/>
-  <testcase name="Test the save action with a null instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.263">
+  <testcase name="Test the index action returns the correct response" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.368"/>
+  <testcase name="Test the save action with a null instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.228">
     <failure message="grails.views.ViewException: Error rendering view: null" type="grails.views.ViewException">grails.views.ViewException: Error rendering view: null
 	at grails.views.AbstractWritableScript.writeTo(AbstractWritableScript.groovy:46)
 	at grails.views.mvc.GenericGroovyTemplateView.renderMergedOutputModel(GenericGroovyTemplateView.groovy:73)
@@ -48,7 +48,7 @@ Caused by: java.lang.NullPointerException
 	... 30 more
 </failure>
   </testcase>
-  <testcase name="Test the save action correctly persists" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.018">
+  <testcase name="Test the save action correctly persists" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.013">
     <failure message="Condition not satisfied:&#10;&#10;false&#10;&#10;TODO: Provide a populateValidParams() implementation for this generated test suite&#10;" type="org.spockframework.runtime.ConditionNotSatisfiedError">Condition not satisfied:
 
 false
@@ -59,7 +59,7 @@ TODO: Provide a populateValidParams() implementation for this generated test sui
 	at br.com.eliteconsult.cadastros.EstadoControllerSpec.Test the save action correctly persists(EstadoControllerSpec.groovy:58)
 </failure>
   </testcase>
-  <testcase name="Test the save action with an invalid instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.014">
+  <testcase name="Test the save action with an invalid instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.013">
     <failure message="Condition not satisfied:&#10;&#10;false&#10;&#10;TODO: Provide a populateValidParams() implementation for this generated test suite&#10;" type="org.spockframework.runtime.ConditionNotSatisfiedError">Condition not satisfied:
 
 false
@@ -70,9 +70,9 @@ TODO: Provide a populateValidParams() implementation for this generated test sui
 	at br.com.eliteconsult.cadastros.EstadoControllerSpec.Test the save action with an invalid instance(EstadoControllerSpec.groovy:78)
 </failure>
   </testcase>
-  <testcase name="Test the show action with a null id" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.017"/>
-  <testcase name="Test the show action with a valid id" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.179"/>
-  <testcase name="Test the update action with a null instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.015">
+  <testcase name="Test the show action with a null id" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.012"/>
+  <testcase name="Test the show action with a valid id" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.114"/>
+  <testcase name="Test the update action with a null instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.013">
     <failure message="grails.views.ViewException: Error rendering view: null" type="grails.views.ViewException">grails.views.ViewException: Error rendering view: null
 	at grails.views.AbstractWritableScript.writeTo(AbstractWritableScript.groovy:46)
 	at grails.views.mvc.GenericGroovyTemplateView.renderMergedOutputModel(GenericGroovyTemplateView.groovy:73)
@@ -118,7 +118,7 @@ Caused by: java.lang.NullPointerException
 	... 30 more
 </failure>
   </testcase>
-  <testcase name="Test the update action correctly persists" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.018">
+  <testcase name="Test the update action correctly persists" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.016">
     <failure message="Condition not satisfied:&#10;&#10;false&#10;&#10;TODO: Provide a populateValidParams() implementation for this generated test suite&#10;" type="org.spockframework.runtime.ConditionNotSatisfiedError">Condition not satisfied:
 
 false
@@ -129,7 +129,7 @@ TODO: Provide a populateValidParams() implementation for this generated test sui
 	at br.com.eliteconsult.cadastros.EstadoControllerSpec.Test the update action correctly persists(EstadoControllerSpec.groovy:135)
 </failure>
   </testcase>
-  <testcase name="Test the update action with an invalid instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.02">
+  <testcase name="Test the update action with an invalid instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.021">
     <failure message="grails.views.ViewException: Error rendering view: null" type="grails.views.ViewException">grails.views.ViewException: Error rendering view: null
 	at grails.views.AbstractWritableScript.writeTo(AbstractWritableScript.groovy:46)
 	at grails.views.mvc.GenericGroovyTemplateView.renderMergedOutputModel(GenericGroovyTemplateView.groovy:73)
@@ -165,8 +165,8 @@ Caused by: java.lang.NullPointerException
 	... 20 more
 </failure>
   </testcase>
-  <testcase name="Test the delete action with a null instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.015"/>
-  <testcase name="Test the delete action with an instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.016"/>
+  <testcase name="Test the delete action with a null instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.023"/>
+  <testcase name="Test the delete action with an instance" classname="br.com.eliteconsult.cadastros.EstadoControllerSpec" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

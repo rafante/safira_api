@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.GrupoParceiroNegocios
+
+model {
+	Iterable<GrupoParceiroNegocios> grupoParceiroNegociosList
+}
+
+json tmpl.grupoParceiroNegocios(grupoParceiroNegociosList ?: [])
+

@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.GrupoParceiroNegocios
+
+model {
+	GrupoParceiroNegocios grupoParceiroNegocios
+}
+
+json tmpl.grupoParceiroNegocios(grupoParceiroNegocios)

@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">7</div>
+<div class="counter">19</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">21.141s</div>
+<div class="counter">48.467s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,37 +79,97 @@
 </thead>
 <tr>
 <td class="success">centros de custo - criar</td>
-<td class="success">0.084s</td>
+<td class="success">0.113s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">centros de custo - ler 1</td>
-<td class="success">0.108s</td>
+<td class="success">0.087s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">empresa - criar</td>
-<td class="success">0.049s</td>
+<td class="success">0.084s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">endereco - criar</td>
-<td class="success">0.060s</td>
+<td class="success">0.118s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">estado - criar</td>
-<td class="success">0.081s</td>
+<td class="success">0.114s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">forma de pagamento - criar</td>
+<td class="success">0.098s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">forma de pagamento - garantir 1 controle cheque</td>
+<td class="success">0.112s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">grupo - criar</td>
+<td class="success">0.075s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">grupo parceiro negocios - criar</td>
+<td class="success">0.074s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">grupo tributacao - criar</td>
+<td class="success">0.098s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">item prazo pagamento - criar</td>
+<td class="success">0.076s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">item prazo pagamento - tem pai</td>
+<td class="success">0.116s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">municipio - criar</td>
-<td class="success">0.085s</td>
+<td class="success">0.116s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">país - criar</td>
-<td class="success">20.674s</td>
+<td class="success">20.167s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">prazo pagamento - criar</td>
+<td class="success">0.084s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">subgrupo - criar</td>
+<td class="success">0.081s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">subgrupo - tem pai</td>
+<td class="success">0.068s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">subgrupo parceiro negocios - criar</td>
+<td class="success">0.053s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">subgrupo parceiro negocios - tem pai</td>
+<td class="success">26.733s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -117,19 +177,19 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>00:53:09,246 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-00:53:09,247 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.groovy] at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/integrationTest/logback.groovy]
-00:53:09,248 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs multiple times on the classpath.
-00:53:09,248 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/main/logback.groovy]
-00:53:09,248 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/integrationTest/logback.groovy]
-00:53:10,402 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
-00:53:10,413 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
-00:53:10,424 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-00:53:10,428 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - Naming appender as [STDOUT]
-00:53:10,599 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - Setting level of logger [ROOT] to ERROR
-00:53:10,608 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - Attaching appender named [STDOUT] to Logger[ROOT]
+<pre>02:04:46,629 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+02:04:46,630 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.groovy] at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/integrationTest/logback.groovy]
+02:04:46,631 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs multiple times on the classpath.
+02:04:46,631 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/main/logback.groovy]
+02:04:46,631 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/integrationTest/logback.groovy]
+02:04:47,511 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@436c093 - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+02:04:47,522 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@436c093 - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
+02:04:47,531 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@436c093 - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+02:04:47,534 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@436c093 - Naming appender as [STDOUT]
+02:04:47,700 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@436c093 - Setting level of logger [ROOT] to ERROR
+02:04:47,710 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@436c093 - Attaching appender named [STDOUT] to Logger[ROOT]
 
-Grails application running at http://localhost:53088 in environment: test
+Grails application running at http://localhost:53806 in environment: test
 </pre>
 </span>
 </div>
@@ -141,7 +201,7 @@ Grails application running at http://localhost:53088 in environment: test
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at Nov 12, 2019, 12:53:32 AM</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at Nov 12, 2019, 2:05:37 AM</p>
 </div>
 </div>
 </body>

@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.SubGrupoParceiroNegocios
+
+model {
+	SubGrupoParceiroNegocios subGrupoParceiroNegocios
+}
+
+json g.render(subGrupoParceiroNegocios, [resolveTemplate: false])

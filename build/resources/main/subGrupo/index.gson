@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.SubGrupo
+
+model {
+	Iterable<SubGrupo> subGrupoList
+}
+
+json tmpl.subGrupo(subGrupoList ?: [])
+

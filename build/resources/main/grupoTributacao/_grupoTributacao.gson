@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.GrupoTributacao
+
+model {
+	GrupoTributacao grupoTributacao
+}
+
+json g.render(grupoTributacao, [resolveTemplate: false])

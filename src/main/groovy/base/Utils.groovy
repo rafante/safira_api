@@ -4,24 +4,115 @@ import br.com.eliteconsult.cadastros.CentroCusto
 import br.com.eliteconsult.cadastros.Empresa
 import br.com.eliteconsult.cadastros.Endereco
 import br.com.eliteconsult.cadastros.Estado
+import br.com.eliteconsult.cadastros.FormaPagamento
+import br.com.eliteconsult.cadastros.Grupo
+import br.com.eliteconsult.cadastros.GrupoParceiroNegocios
+import br.com.eliteconsult.cadastros.GrupoTributacao
+import br.com.eliteconsult.cadastros.ItemPrazoPagamento
 import br.com.eliteconsult.cadastros.Municipio
 import br.com.eliteconsult.cadastros.Pais
-import grails.core.GrailsDomainClass
-
-//import net.sf.jasperreports.engine.JRException
-//import net.sf.jasperreports.engine.JRExporterParameter
-//import net.sf.jasperreports.engine.JasperPrint
-//import net.sf.jasperreports.engine.export.JRPdfExporter
-//import net.sf.jasperreports.engine.export.JRXlsExporter
-//import net.sf.jasperreports.engine.export.JRXlsExporterParameter
-//import org.codehaus.groovy.grails.commons.GrailsApplication
-//import org.codehaus.groovy.grails.commons.GrailsDomainClass
+import br.com.eliteconsult.cadastros.PrazoPagamento
+import br.com.eliteconsult.cadastros.SubGrupo
+import br.com.eliteconsult.cadastros.SubGrupoParceiroNegocios
 
 import java.text.DateFormat
 import java.text.Normalizer
 import java.text.SimpleDateFormat
 
 class Utils {
+
+     static void criaBancoTeste(){
+        def brasil = new Pais(cod_pais: 'BR', nome: 'Brasil')
+        assert brasil.save(flush: true, failOnError: true)
+
+        def mg = new Estado(nome: 'Minas Gerais', sigla: 'MG', pais: brasil)
+        assert mg.save(flush: true, failOnError: true)
+
+        def beloHorizonte = new Municipio(nome: 'Belo Horizonte', estado: mg)
+        assert beloHorizonte.save(flush: true, failOnError: true)
+
+        def endereco_comercial = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+        assert endereco_comercial.save(flush: true, failOnError: true)
+
+        def endereco_entrega = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+        assert endereco_entrega.save(flush: true, failOnError: true)
+
+        def endereco_cobranca = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+        assert endereco_cobranca.save(flush: true, failOnError: true)
+
+        def empresa = new Empresa(nome: 'Bruno Batista Rafante 07643635650', cnpj_cpf: '24594165000105', apelido: 'Rafante Informática', endereco_comercial: endereco_comercial, endereco_entrega: endereco_entrega, endereco_cobranca: endereco_cobranca, cnae: '95.11-8-00', suframa: 'aaa', ind_ativ: 1, ind_nat_pj: '00', inscricao_estadual: '0034225920038', inscricao_municipal: '11437140011', serial_certificado_digital: 'aaa')
+        assert  empresa.save(flush: true, failOnError: true)
+
+        def centroCusto1 = new CentroCusto(descricao: 'Administração', codigo: '01')
+        assert centroCusto1.save(flush: true, failOnError: true)
+
+        def centroCusto2 = new CentroCusto(descricao: 'Almoxarifado', codigo: '02', filhos: [centroCusto1])
+        assert centroCusto2.save(flush: true, failOnError: true)
+
+        def centroCusto3 = new CentroCusto(descricao: 'Almoxarifado', codigo: '02', centroCusto: centroCusto2)
+        assert centroCusto3.save(flush: true, failOnError: true)
+
+        def pgtoDinheiro = new FormaPagamento(descricao: 'Dinheiro', controle_cheque: false)
+        assert pgtoDinheiro.save(flush: true, failOnError: true)
+
+        def pgtoCartao = new FormaPagamento(descricao: 'Cartão', controle_cheque: false)
+        assert pgtoCartao.save(flush: true, failOnError: true)
+
+        def pgtoCheque = new FormaPagamento(descricao: 'Cheque', controle_cheque: true)
+        assert pgtoCheque.save(flush: true, failOnError: true)
+
+        def pgtoTransferencia = new FormaPagamento(descricao: 'Transferência Bancária', controle_cheque: false)
+        assert pgtoTransferencia.save(flush: true, failOnError: true)
+
+         def grupo1 = new Grupo(descricao: 'CA-25')
+         assert grupo1.save(flush: true, failOnError: true)
+
+         def grupo2 = new Grupo(descricao: 'CA-50')
+         assert grupo2.save(flush: true, failOnError: true)
+
+         def grupoParceiroNegocios1 = new GrupoParceiroNegocios(descricao: 'AÇO')
+         assert grupoParceiroNegocios1.save(flush: true, failOnError: true)
+
+         def grupoParceiroNegocios2 = new GrupoParceiroNegocios(descricao: 'FERRO')
+         assert grupoParceiroNegocios2.save(flush: true, failOnError: true)
+
+         def grupoTributacao1 = new GrupoTributacao(descricao: 'Tributáveis no município')
+         assert grupoTributacao1.save(flush: true, failOnError: true)
+
+         def grupoTributacao2 = new GrupoTributacao(descricao: 'Tributáveis no estado')
+         assert grupoTributacao2.save(flush: true, failOnError: true)
+
+         def prazo30_60 = new PrazoPagamento(descricao: '30/60 dias', itemPrazoPagamento: [])
+         prazo30_60.addToItemPrazoPagamento(new ItemPrazoPagamento(prazo: 30, percentual: 50))
+         prazo30_60.addToItemPrazoPagamento(new ItemPrazoPagamento(prazo: 60, percentual: 50))
+
+         assert prazo30_60.save(flush: true, failOnError: true)
+
+         def prazo30_60_90 = new PrazoPagamento(descricao: '30/60/90 dias', itemPrazoPagamento: [])
+         prazo30_60_90.addToItemPrazoPagamento(new ItemPrazoPagamento(prazo: 30, percentual: 33))
+         prazo30_60_90.addToItemPrazoPagamento(new ItemPrazoPagamento(prazo: 60, percentual: 33))
+         prazo30_60_90.addToItemPrazoPagamento(new ItemPrazoPagamento(prazo: 90, percentual: 34))
+
+         assert prazo30_60_90.save(flush: true, failOnError: true)
+
+         def subGrupo1 = new SubGrupo(descricao: 'Aço liso', grupo: grupo1)
+         assert subGrupo1.save(flush: true, failOnError: true)
+
+         def subGrupo2 = new SubGrupo(descricao: 'Aço escovado', grupo: grupo1)
+         assert subGrupo2.save(flush: true, failOnError: true)
+
+         def subGrupo3 = new SubGrupo(descricao: 'Ferro fosco', grupo: grupo2)
+         assert subGrupo3.save(flush: true, failOnError: true)
+
+         def subGrupo1Parceiro = new SubGrupoParceiroNegocios(descricao: 'Aço liso', grupo_parceiro: grupoParceiroNegocios1)
+         assert subGrupo1Parceiro.save(flush: true, failOnError: true)
+
+         def subGrupo2Parceiro = new SubGrupoParceiroNegocios(descricao: 'Aço escovado', grupo_parceiro: grupoParceiroNegocios1)
+         assert subGrupo2Parceiro.save(flush: true, failOnError: true)
+
+         def subGrupo3Parceiro = new SubGrupoParceiroNegocios(descricao: 'Ferro fosco', grupo_parceiro: grupoParceiroNegocios2)
+         assert subGrupo3Parceiro.save(flush: true, failOnError: true)
+    }
 
     static String GetOnlyNumerics(String str) {
 
@@ -319,38 +410,6 @@ class Utils {
 
     public static FormataValorSPED(valor) {
         return valor
-    }
-
-    public static void criaBancoTeste(){
-        def brasil = new Pais(cod_pais: 'BR', nome: 'Brasil')
-        assert brasil.save(flush: true)
-
-        def mg = new Estado(nome: 'Minas Gerais', sigla: 'MG', pais: brasil)
-        assert mg.save(flush: true)
-
-        def beloHorizonte = new Municipio(nome: 'Belo Horizonte', estado: mg)
-        assert beloHorizonte.save(flush: true)
-
-        def endereco_comercial = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
-        assert endereco_comercial.save(flush: true)
-
-        def endereco_entrega = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
-        assert endereco_entrega.save(flush: true)
-
-        def endereco_cobranca = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
-        assert endereco_cobranca.save(flush: true)
-
-        def empresa = new Empresa(nome: 'Bruno Batista Rafante 07643635650', cnpj_cpf: '24594165000105', apelido: 'Rafante Informática', endereco_comercial: endereco_comercial, endereco_entrega: endereco_entrega, endereco_cobranca: endereco_cobranca, cnae: '95.11-8-00', suframa: 'aaa', ind_ativ: 1, ind_nat_pj: '00', inscricao_estadual: '0034225920038', inscricao_municipal: '11437140011', serial_certificado_digital: 'aaa')
-        assert  empresa.save(flush: true)
-
-        def centroCusto1 = new CentroCusto(descricao: 'Administração', codigo: '01')
-        assert centroCusto1.save(flush: true)
-
-        def centroCusto2 = new CentroCusto(descricao: 'Almoxarifado', codigo: '02', filhos: [centroCusto1])
-        assert centroCusto2.save(flush: true)
-
-        def centroCusto3 = new CentroCusto(descricao: 'Almoxarifado', codigo: '02', centroCusto: centroCusto2)
-        assert centroCusto3.save(flush: true)
     }
 
 //    public static ByteArrayOutputStream ExportReportPdf(JasperPrint jp) throws JRException, FileNotFoundException {
