@@ -63,6 +63,7 @@ dependencies {
     testCompile "org.mockito:mockito-core"
     testCompile "io.micronaut:micronaut-http-client"
     testCompile "org.grails:grails-web-testing-support"
+    testCompile(group: 'org.spockframework', name: 'spock-core')
 }
 
 bootRun {

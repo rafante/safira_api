@@ -5,9 +5,6 @@ class CentroCusto {
     String codigo
     String descricao
 
-    static defaultValueField = "codigo;descricao"
-    static defaultFilterFields = "codigo;descricao"
-
     static belongsTo = [centroCusto: CentroCusto]
 
     static hasMany = [filhos: CentroCusto]

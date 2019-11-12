@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.ParametrosGerais
+
+model {
+	ParametrosGerais parametrosGerais
+}
+
+json tmpl.parametrosGerais(parametrosGerais)

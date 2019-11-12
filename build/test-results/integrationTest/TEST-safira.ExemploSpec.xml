@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="safira.ExemploSpec" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-11-12T02:53:11" hostname="Brunos-MacBook-Pro.local" time="21.142">
+  <properties/>
+  <testcase name="país - criar" classname="safira.ExemploSpec" time="20.674"/>
+  <testcase name="estado - criar" classname="safira.ExemploSpec" time="0.081"/>
+  <testcase name="municipio - criar" classname="safira.ExemploSpec" time="0.085"/>
+  <testcase name="endereco - criar" classname="safira.ExemploSpec" time="0.06"/>
+  <testcase name="empresa - criar" classname="safira.ExemploSpec" time="0.049"/>
+  <testcase name="centros de custo - criar" classname="safira.ExemploSpec" time="0.084"/>
+  <testcase name="centros de custo - ler 1" classname="safira.ExemploSpec" time="0.108"/>
+  <system-out><![CDATA[00:53:09,246 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+00:53:09,247 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.groovy] at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/integrationTest/logback.groovy]
+00:53:09,248 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs multiple times on the classpath.
+00:53:09,248 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/main/logback.groovy]
+00:53:09,248 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.groovy] occurs at [file:/Users/brunorafante/dev/grails/safira_api/build/resources/integrationTest/logback.groovy]
+00:53:10,402 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+00:53:10,413 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
+00:53:10,424 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+00:53:10,428 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - Naming appender as [STDOUT]
+00:53:10,599 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - Setting level of logger [ROOT] to ERROR
+00:53:10,608 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@5474fe6 - Attaching appender named [STDOUT] to Logger[ROOT]
+
+Grails application running at http://localhost:53088 in environment: test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

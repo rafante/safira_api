@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.Estado
+
+model {
+	Iterable<Estado> estadoList
+}
+
+json tmpl.estado(estadoList ?: [])
+

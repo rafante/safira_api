@@ -15,7 +15,6 @@ public class Endereco {
     String telefone2
     String celular1
     String celular2
-    private String municipio_old
 
     //entao o que vc quer �
     //item.contaReceber.parceiroNegocios.getEnderecoPrincipal().logradouro ou .bairro, ou .numero, etc

@@ -1,5 +1,7 @@
 package br.com.eliteconsult.cadastros
 
+import base.Utils
+
 class Empresa {
 
     String nome
@@ -7,7 +9,7 @@ class Empresa {
     String cnpj_cpf
     String inscricao_estadual
     String inscricao_municipal
-    Integer cnae
+    String cnae
     String serial_certificado_digital
     Endereco endereco_comercial
     Endereco endereco_cobranca
@@ -34,7 +36,7 @@ class Empresa {
 
     static constraints = {
         empresa(nullable: true)
-        nome(size: 0..30)
+        nome(size: 0..60)
         apelido()
         cnpj_cpf(unique: true, size: 0..14, blank: false, nullable: false,
                 validator: { val, obj ->

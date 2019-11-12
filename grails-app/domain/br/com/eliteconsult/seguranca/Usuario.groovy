@@ -1,5 +1,7 @@
 package br.com.eliteconsult.seguranca
 
+import br.com.eliteconsult.cadastros.Empresa
+
 public class Usuario {
 
     transient springSecurityService

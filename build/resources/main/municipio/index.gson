@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.Municipio
+
+model {
+	Iterable<Municipio> municipioList
+}
+
+json tmpl.municipio(municipioList ?: [])
+

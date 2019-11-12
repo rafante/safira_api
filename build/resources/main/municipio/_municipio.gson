@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.Municipio
+
+model {
+	Municipio municipio
+}
+
+json g.render(municipio, [resolveTemplate: false])
