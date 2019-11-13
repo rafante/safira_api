@@ -12,9 +12,13 @@ import br.com.eliteconsult.cadastros.GrupoTributacao
 import br.com.eliteconsult.cadastros.ItemPrazoPagamento
 import br.com.eliteconsult.cadastros.Municipio
 import br.com.eliteconsult.cadastros.Pais
+import br.com.eliteconsult.cadastros.ParceiroNegocios
 import br.com.eliteconsult.cadastros.PrazoPagamento
+import br.com.eliteconsult.cadastros.Setor
 import br.com.eliteconsult.cadastros.SubGrupo
 import br.com.eliteconsult.cadastros.SubGrupoParceiroNegocios
+import br.com.eliteconsult.cadastros.TabelaPreco
+import br.com.eliteconsult.cadastros.TipoDocumento
 import grails.testing.mixin.integration.Integration
 import grails.gorm.transactions.Rollback
 import spock.lang.Specification
@@ -54,7 +58,7 @@ class ExemploSpec extends Specification {
         setupData()
 
         expect:
-        Endereco.count() == 3
+        Endereco.count() == 6
     }
 
     def "empresa - criar"(){
@@ -96,7 +100,7 @@ class ExemploSpec extends Specification {
         setupData()
 
         expect:
-        Grupo.count() == 2
+        Grupo.count() == 3
     }
 
     def "grupo parceiro negocios - criar"(){
@@ -164,6 +168,46 @@ class ExemploSpec extends Specification {
         expect:
         lista.find {it.grupo_parceiro == null} == null
     }
+
+    def "setor - criar"(){
+        setupData()
+
+        expect:
+        Setor.count() == 2
+    }
+
+    def "tabela de preços - criar"(){
+        setupData()
+
+        expect:
+        TabelaPreco.count() == 3
+    }
+
+    def "tipos de documento - criar"(){
+        setupData()
+
+        expect:
+        TipoDocumento.count() == 2
+    }
+
+    def "parceiros de negócios - criar"(){
+        setupData()
+
+        expect:
+        ParceiroNegocios.count() == 2
+    }
+
+    def "parceiros de negócios - validações"(){
+        setupData()
+        given:
+        def listaParceiros = ParceiroNegocios.list()
+
+        expect:
+        listaParceiros.find{ it.grupo_parceiro != null && it?.sub_grupo_parceiro?.grupo_parceiro?.id != it?.grupo_parceiro?.id } == null
+    }
+
+
+
 
     /*def setup() { //roda antes de cada método de teste
     }

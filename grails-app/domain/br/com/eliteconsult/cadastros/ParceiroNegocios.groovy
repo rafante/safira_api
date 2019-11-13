@@ -1,5 +1,7 @@
 package br.com.eliteconsult.cadastros
 
+import base.Utils
+
 public class ParceiroNegocios {
 
     String apelido //nome fantasia (ex.: Petrobrás)
@@ -43,7 +45,7 @@ public class ParceiroNegocios {
          * Nome do Parceiro de Neg�cio
          * Tamanho 60
          */
-        nome(size: 0..30, blank: false, nullable: false)
+        nome(size: 0..60, blank: false, nullable: false)
 
         /**
          * Apelido (nome fantasia, nome de tratamento)
@@ -72,8 +74,8 @@ public class ParceiroNegocios {
         /**
          * Tamanho 14. Realizar valida��o.
          */
-        inscricao_estadual(size: 0..14)
-        inscricao_municipal(size: 0..14)
+        inscricao_estadual(size: 0..14, nullable: true)
+        inscricao_municipal(size: 0..14, nullable: true)
 
         endereco_cobranca(cascade: "all-delete-orphan")
         endereco_comercial(cascade: "all-delete-orphan")
@@ -111,6 +113,11 @@ public class ParceiroNegocios {
         historicoContato(cascade: "all-delete-orphan")
 
         prazo_pagamento_default()
+
+        grupo_parceiro(nullable: true)
+        sub_grupo_parceiro(nullable: true)
+
+        historicoContato(nullable: true)
     }
 
     String getDocumentoFormatado() {

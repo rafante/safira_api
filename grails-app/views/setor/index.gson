@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.Setor
+
+model {
+	Iterable<Setor> setorList
+}
+
+json tmpl.setor(setorList ?: [])
+

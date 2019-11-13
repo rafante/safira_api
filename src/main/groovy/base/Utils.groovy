@@ -8,12 +8,19 @@ import br.com.eliteconsult.cadastros.FormaPagamento
 import br.com.eliteconsult.cadastros.Grupo
 import br.com.eliteconsult.cadastros.GrupoParceiroNegocios
 import br.com.eliteconsult.cadastros.GrupoTributacao
+import br.com.eliteconsult.cadastros.HistoricoContato
 import br.com.eliteconsult.cadastros.ItemPrazoPagamento
 import br.com.eliteconsult.cadastros.Municipio
 import br.com.eliteconsult.cadastros.Pais
+import br.com.eliteconsult.cadastros.ParceiroNegocios
 import br.com.eliteconsult.cadastros.PrazoPagamento
+import br.com.eliteconsult.cadastros.Setor
 import br.com.eliteconsult.cadastros.SubGrupo
 import br.com.eliteconsult.cadastros.SubGrupoParceiroNegocios
+import br.com.eliteconsult.cadastros.TabelaPreco
+import br.com.eliteconsult.cadastros.TipoComissao
+import br.com.eliteconsult.cadastros.TipoDocumento
+import br.com.eliteconsult.cadastros.TipoVendedor
 
 import java.text.DateFormat
 import java.text.Normalizer
@@ -31,16 +38,25 @@ class Utils {
         def beloHorizonte = new Municipio(nome: 'Belo Horizonte', estado: mg)
         assert beloHorizonte.save(flush: true, failOnError: true)
 
-        def endereco_comercial = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
-        assert endereco_comercial.save(flush: true, failOnError: true)
+        def endereco_comercial1 = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+        assert endereco_comercial1.save(flush: true, failOnError: true)
 
-        def endereco_entrega = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
-        assert endereco_entrega.save(flush: true, failOnError: true)
+        def endereco_entrega1 = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+        assert endereco_entrega1.save(flush: true, failOnError: true)
 
-        def endereco_cobranca = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
-        assert endereco_cobranca.save(flush: true, failOnError: true)
+        def endereco_cobranca1 = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+        assert endereco_cobranca1.save(flush: true, failOnError: true)
 
-        def empresa = new Empresa(nome: 'Bruno Batista Rafante 07643635650', cnpj_cpf: '24594165000105', apelido: 'Rafante Informática', endereco_comercial: endereco_comercial, endereco_entrega: endereco_entrega, endereco_cobranca: endereco_cobranca, cnae: '95.11-8-00', suframa: 'aaa', ind_ativ: 1, ind_nat_pj: '00', inscricao_estadual: '0034225920038', inscricao_municipal: '11437140011', serial_certificado_digital: 'aaa')
+         def endereco_comercial2 = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+         assert endereco_comercial2.save(flush: true, failOnError: true)
+
+         def endereco_entrega2 = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+         assert endereco_entrega2.save(flush: true, failOnError: true)
+
+         def endereco_cobranca2 = new Endereco(bairro: 'Santa Tereza', municipio: beloHorizonte, cep: '31010220', complemento: 'apto 202', contato: 'Bruno Rafante', email: 'rafante2@gmail.com', logradouro: 'Rua Mármore', numero: '209', telefone1: '31988898523', telefone2: '31993740147', celular1: '0000000000',celular2: '1111111111').save(flush: true, failOnError: true)
+         assert endereco_cobranca2.save(flush: true, failOnError: true)
+
+        def empresa = new Empresa(nome: 'Bruno Batista Rafante 07643635650', cnpj_cpf: '24594165000105', apelido: 'Rafante Informática', endereco_comercial: endereco_comercial2, endereco_entrega: endereco_entrega2, endereco_cobranca: endereco_cobranca2, cnae: '95.11-8-00', suframa: 'aaa', ind_ativ: 1, ind_nat_pj: '00', inscricao_estadual: '0034225920038', inscricao_municipal: '11437140011', serial_certificado_digital: 'aaa')
         assert  empresa.save(flush: true, failOnError: true)
 
         def centroCusto1 = new CentroCusto(descricao: 'Administração', codigo: '01')
@@ -64,17 +80,20 @@ class Utils {
         def pgtoTransferencia = new FormaPagamento(descricao: 'Transferência Bancária', controle_cheque: false)
         assert pgtoTransferencia.save(flush: true, failOnError: true)
 
-         def grupo1 = new Grupo(descricao: 'CA-25')
-         assert grupo1.save(flush: true, failOnError: true)
+         def grupoCA25 = new Grupo(descricao: 'CA-25')
+         assert grupoCA25.save(flush: true, failOnError: true)
 
-         def grupo2 = new Grupo(descricao: 'CA-50')
-         assert grupo2.save(flush: true, failOnError: true)
+         def grupoCA50 = new Grupo(descricao: 'CA-50')
+         assert grupoCA50.save(flush: true, failOnError: true)
 
-         def grupoParceiroNegocios1 = new GrupoParceiroNegocios(descricao: 'AÇO')
-         assert grupoParceiroNegocios1.save(flush: true, failOnError: true)
+         def grupoVergalhao = new Grupo(descricao: 'Vercalhão')
+         assert grupoVergalhao.save(flush: true, failOnError: true)
 
-         def grupoParceiroNegocios2 = new GrupoParceiroNegocios(descricao: 'FERRO')
-         assert grupoParceiroNegocios2.save(flush: true, failOnError: true)
+         def grupoPNAco = new GrupoParceiroNegocios(descricao: 'AÇO')
+         assert grupoPNAco.save(flush: true, failOnError: true)
+
+         def grupoPNFerro = new GrupoParceiroNegocios(descricao: 'FERRO')
+         assert grupoPNFerro.save(flush: true, failOnError: true)
 
          def grupoTributacao1 = new GrupoTributacao(descricao: 'Tributáveis no município')
          assert grupoTributacao1.save(flush: true, failOnError: true)
@@ -95,23 +114,97 @@ class Utils {
 
          assert prazo30_60_90.save(flush: true, failOnError: true)
 
-         def subGrupo1 = new SubGrupo(descricao: 'Aço liso', grupo: grupo1)
-         assert subGrupo1.save(flush: true, failOnError: true)
+         def subGrupoAcoLiso = new SubGrupo(descricao: 'Aço liso', grupo: grupoCA25)
+         assert subGrupoAcoLiso.save(flush: true, failOnError: true)
 
-         def subGrupo2 = new SubGrupo(descricao: 'Aço escovado', grupo: grupo1)
+         def subGrupo2 = new SubGrupo(descricao: 'Aço escovado', grupo: grupoCA50)
          assert subGrupo2.save(flush: true, failOnError: true)
 
-         def subGrupo3 = new SubGrupo(descricao: 'Ferro fosco', grupo: grupo2)
+         def subGrupo3 = new SubGrupo(descricao: 'Ferro fosco', grupo: grupoVergalhao)
          assert subGrupo3.save(flush: true, failOnError: true)
 
-         def subGrupo1Parceiro = new SubGrupoParceiroNegocios(descricao: 'Aço liso', grupo_parceiro: grupoParceiroNegocios1)
-         assert subGrupo1Parceiro.save(flush: true, failOnError: true)
+         def subGrpPNAcoLiso = new SubGrupoParceiroNegocios(descricao: 'Aço liso', grupo_parceiro: grupoPNAco)
+         assert subGrpPNAcoLiso.save(flush: true, failOnError: true)
 
-         def subGrupo2Parceiro = new SubGrupoParceiroNegocios(descricao: 'Aço escovado', grupo_parceiro: grupoParceiroNegocios1)
-         assert subGrupo2Parceiro.save(flush: true, failOnError: true)
+         def subGrpPNAcoEscovado = new SubGrupoParceiroNegocios(descricao: 'Aço escovado', grupo_parceiro: grupoPNAco)
+         assert subGrpPNAcoEscovado.save(flush: true, failOnError: true)
 
-         def subGrupo3Parceiro = new SubGrupoParceiroNegocios(descricao: 'Ferro fosco', grupo_parceiro: grupoParceiroNegocios2)
+         def subGrupo3Parceiro = new SubGrupoParceiroNegocios(descricao: 'Ferro fosco', grupo_parceiro: grupoPNAco)
          assert subGrupo3Parceiro.save(flush: true, failOnError: true)
+
+         def setor1 = new Setor(descricao: 'Qualidade')
+         assert setor1.save(flush: true, failOnError: true)
+
+         def setor2 = new Setor(descricao: 'Testes')
+         assert setor2.save(flush: true, failOnError: true)
+
+         def tabelaPreco1 = new TabelaPreco(descricao: 'Normal', margem_minima: 90, margem_sugerida: 100)
+         assert tabelaPreco1.save(flush: true, failOnError: true)
+
+         def tabelaPreco2 = new TabelaPreco(descricao: 'Black Friday', margem_minima: 30, margem_sugerida: 40)
+         assert tabelaPreco2.save(flush: true, failOnError: true)
+
+         def tabelaPreco3 = new TabelaPreco(descricao: 'Preços Altos', margem_minima: 95, margem_sugerida: 110)
+         assert tabelaPreco3.save(flush: true, failOnError: true)
+
+         def notaFiscal = new TipoDocumento(descricao: 'Nota Fiscal')
+         notaFiscal.save(flush: true, failOnError: true)
+
+         def fatura = new TipoDocumento(descricao: 'Fatura')
+         fatura.save(flush: true, failOnError: true)
+
+         def enrico = new ParceiroNegocios(
+                 apelido: 'Enrico e Luiza Consultoria',
+                 nome: 'Enrico e Luiza Consultoria Financeira ME',
+                 percentual_comissao: 0,
+                 cnpj_cpf: '30385854000102',
+                 inscricao_municipal: '11231412',
+                 inscricao_estadual: '191572546243',
+                 cliente: false,
+                 fornecedor: true,
+                 representanteVenda: true,
+                 transportadora: true,
+                 tipo_comissao: TipoComissao.SOB_VENDA,
+                 tipo_vendedor: TipoVendedor.EXTERNO,
+                 endereco_cobranca: endereco_cobranca1,
+                 endereco_entrega: endereco_entrega1,
+                 endereco_comercial: endereco_comercial1,
+                 tabela_preco: tabelaPreco3,
+                 grupo_parceiro: grupoPNAco,
+                 sub_grupo_parceiro: subGrpPNAcoEscovado,
+                 suframa: '1234567890',
+                 credito: 10.50,
+                 prazo_pagamento_default: prazo30_60,
+         )
+         enrico.addToHistoricoContato(new HistoricoContato(contato: 'Enrico', historico: 'Add'))
+         enrico.save(flush: true, failOnError: true)
+
+         def severino = new ParceiroNegocios(
+                 apelido: 'Severino e Elias Transportes Ltda',
+                 nome: 'Severino e Elias',
+                 percentual_comissao: 1,
+                 cnpj_cpf: '31394630000111',
+//                 inscricao_municipal: '11233412',
+                 inscricao_estadual: '170948714731',
+                 cliente: true,
+                 fornecedor: false,
+                 representanteVenda: false,
+                 transportadora: true,
+                 tipo_comissao: TipoComissao.SOB_RECEBIMENTO,
+                 tipo_vendedor: TipoVendedor.INTERNO,
+                 endereco_cobranca: endereco_cobranca2,
+                 endereco_entrega: endereco_entrega2,
+                 endereco_comercial: endereco_comercial2,
+                 tabela_preco: tabelaPreco1,
+                 sub_grupo: grupoPNFerro,
+//                 sub_grupo_parceiro: ,
+                 suframa: '1234567890',
+                 credito: 10.50,
+                 prazo_pagamento_default: prazo30_60,
+         )
+         severino.addToHistoricoContato(new HistoricoContato(contato: 'Severino', historico: 'Add'))
+         severino.addToHistoricoContato(new HistoricoContato(contato: 'Elias', historico: 'RM'))
+         severino.save(flush: true, failOnError: true)
     }
 
     static String GetOnlyNumerics(String str) {
