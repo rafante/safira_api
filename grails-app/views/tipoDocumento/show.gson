@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.TipoDocumento
+
+model {
+	TipoDocumento tipoDocumento
+}
+
+json tmpl.tipoDocumento(tipoDocumento)
