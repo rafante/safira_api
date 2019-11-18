@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.UnidadeMedida
+
+model {
+	UnidadeMedida unidadeMedida
+}
+
+json g.render(unidadeMedida, [resolveTemplate: false])

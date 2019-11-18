@@ -21,6 +21,7 @@ import br.com.eliteconsult.cadastros.TabelaPreco
 import br.com.eliteconsult.cadastros.TipoComissao
 import br.com.eliteconsult.cadastros.TipoDocumento
 import br.com.eliteconsult.cadastros.TipoVendedor
+import br.com.eliteconsult.materiais.UnidadeMedida
 
 import java.text.DateFormat
 import java.text.Normalizer
@@ -205,6 +206,15 @@ class Utils {
          severino.addToHistoricoContato(new HistoricoContato(contato: 'Severino', historico: 'Add'))
          severino.addToHistoricoContato(new HistoricoContato(contato: 'Elias', historico: 'RM'))
          severino.save(flush: true, failOnError: true)
+
+         def unidade = new UnidadeMedida(descricao: 'Unidade', unidade: 'UN')
+         unidade.save(flush: true, failOnError: true)
+
+         def kilo = new UnidadeMedida(descricao: 'Kilo', unidade: 'KG')
+         kilo.save(flush: true, failOnError: true)
+
+         def metro = new UnidadeMedida(descricao: 'Metro', unidade: 'MT')
+         metro.save(flush: true, failOnError: true)
     }
 
     static String GetOnlyNumerics(String str) {

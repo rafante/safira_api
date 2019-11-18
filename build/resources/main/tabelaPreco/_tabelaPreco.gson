@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.TabelaPreco
+
+model {
+	TabelaPreco tabelaPreco
+}
+
+json g.render(tabelaPreco, [resolveTemplate: false])

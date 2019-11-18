@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.HistoricoContato
+
+model {
+	HistoricoContato historicoContato
+}
+
+json g.render(historicoContato, [resolveTemplate: false])

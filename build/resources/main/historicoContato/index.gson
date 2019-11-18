@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.HistoricoContato
+
+model {
+	Iterable<HistoricoContato> historicoContatoList
+}
+
+json tmpl.historicoContato(historicoContatoList ?: [])
+
