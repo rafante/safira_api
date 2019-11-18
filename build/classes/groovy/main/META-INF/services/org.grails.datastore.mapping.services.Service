@@ -17,4 +17,5 @@ br.com.eliteconsult.cadastros.$SubGrupoParceiroNegociosServiceImplementation
 br.com.eliteconsult.cadastros.$SubGrupoServiceImplementation
 br.com.eliteconsult.cadastros.$TabelaPrecoServiceImplementation
 br.com.eliteconsult.cadastros.$TipoDocumentoServiceImplementation
+br.com.eliteconsult.financeiro.$PlanoContasServiceImplementation
 br.com.eliteconsult.materiais.$UnidadeMedidaServiceImplementation

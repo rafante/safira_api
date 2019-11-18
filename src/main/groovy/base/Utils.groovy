@@ -218,6 +218,24 @@ class Utils {
          def metro = new UnidadeMedida(descricao: 'Metro', unidade: 'MT')
          metro.save(flush: true, failOnError: true)
 
+         def duzia = new UnidadeMedida(descricao: 'Dúzia', unidade: 'DZ')
+         duzia.save(flush: true, failOnError: true)
+
+         def kilometro = new UnidadeMedida(descricao: 'Kilômetro', unidade: 'KM')
+         kilometro.save(flush: true, failOnError: true)
+
+         def caixa = new UnidadeMedida(descricao: 'Caixa', unidade: 'CX')
+         caixa.save(flush: true, failOnError: true)
+
+         def polegada = new UnidadeMedida(descricao: 'Polegada', unidade: 'PG')
+         polegada.save(flush: true, failOnError: true)
+
+         def jaule = new UnidadeMedida(descricao: 'Jaule', unidade: 'JL')
+         jaule.save(flush: true, failOnError: true)
+
+         def kilowatt = new UnidadeMedida(descricao: 'Kilowatt', unidade: 'KW')
+         kilowatt.save(flush: true, failOnError: true)
+
          def planoCaixaGeral = new PlanoContas(descricao: 'Caixa Geral', codigo: '1-01-001', natureza: Natureza.DESPESA)
          planoCaixaGeral.save(flush: true, failOnError: true)
 
@@ -226,6 +244,7 @@ class Utils {
 
          def planoAplicacoesFinanceiras = new PlanoContas(descricao: 'Aplicações Financeiras', codigo: '1-01-003', natureza: Natureza.DESPESA)
          planoAplicacoesFinanceiras.save(flush: true, failOnError: true)
+
     }
 
     static String GetOnlyNumerics(String str) {

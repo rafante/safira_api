@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.PlanoContas
+
+model {
+	Iterable<PlanoContas> planoContasList
+}
+
+json tmpl.planoContas(planoContasList ?: [])
+
