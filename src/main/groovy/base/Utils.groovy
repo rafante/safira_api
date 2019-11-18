@@ -21,6 +21,8 @@ import br.com.eliteconsult.cadastros.TabelaPreco
 import br.com.eliteconsult.cadastros.TipoComissao
 import br.com.eliteconsult.cadastros.TipoDocumento
 import br.com.eliteconsult.cadastros.TipoVendedor
+import br.com.eliteconsult.financeiro.Natureza
+import br.com.eliteconsult.financeiro.PlanoContas
 import br.com.eliteconsult.materiais.UnidadeMedida
 
 import java.text.DateFormat
@@ -215,6 +217,15 @@ class Utils {
 
          def metro = new UnidadeMedida(descricao: 'Metro', unidade: 'MT')
          metro.save(flush: true, failOnError: true)
+
+         def planoCaixaGeral = new PlanoContas(descricao: 'Caixa Geral', codigo: '1-01-001', natureza: Natureza.DESPESA)
+         planoCaixaGeral.save(flush: true, failOnError: true)
+
+         def planoBancos = new PlanoContas(descricao: 'Bancos', codigo: '1-01-002', natureza: Natureza.DESPESA)
+         planoBancos.save(flush: true, failOnError: true)
+
+         def planoAplicacoesFinanceiras = new PlanoContas(descricao: 'Aplicações Financeiras', codigo: '1-01-003', natureza: Natureza.DESPESA)
+         planoAplicacoesFinanceiras.save(flush: true, failOnError: true)
     }
 
     static String GetOnlyNumerics(String str) {
