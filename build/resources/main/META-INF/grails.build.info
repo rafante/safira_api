@@ -1,6 +1,6 @@
-#Mon, 18 Nov 2019 00:47:37 -0300
+#Thu, 21 Nov 2019 22:08:01 -0200
 
 info.app.version=0.1
 info.app.name=safira_api
-grails.env=development
+grails.env=production
 info.app.grailsVersion=4.0.0.RC2
