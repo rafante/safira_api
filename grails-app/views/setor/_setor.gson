@@ -4,4 +4,4 @@ model {
 	Setor setor
 }
 
-json g.render(setor, [resolveTemplate: false])
+json g.render(setor, [deep: true])

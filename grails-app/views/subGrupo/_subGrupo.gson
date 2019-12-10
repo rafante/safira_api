@@ -4,4 +4,4 @@ model {
 	SubGrupo subGrupo
 }
 
-json g.render(subGrupo, [resolveTemplate: false])
+json g.render(subGrupo, [deep: true])

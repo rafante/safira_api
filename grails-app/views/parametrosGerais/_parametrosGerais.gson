@@ -4,4 +4,4 @@ model {
 	ParametrosGerais parametrosGerais
 }
 
-json g.render(parametrosGerais, [resolveTemplate: false])
+json g.render(parametrosGerais, [deep: true])

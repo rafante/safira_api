@@ -4,4 +4,4 @@ model {
 	PlanoContas planoContas
 }
 
-json g.render(planoContas, [resolveTemplate: false])
+json g.render(planoContas, [deep: true])

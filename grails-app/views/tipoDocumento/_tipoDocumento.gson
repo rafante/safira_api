@@ -4,4 +4,4 @@ model {
 	TipoDocumento tipoDocumento
 }
 
-json g.render(tipoDocumento, [resolveTemplate: false])
+json g.render(tipoDocumento, [deep: true])

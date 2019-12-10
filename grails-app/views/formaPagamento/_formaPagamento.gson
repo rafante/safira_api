@@ -4,4 +4,4 @@ model {
 	FormaPagamento formaPagamento
 }
 
-json g.render(formaPagamento, [resolveTemplate: false])
+json g.render(formaPagamento, [deep: true])

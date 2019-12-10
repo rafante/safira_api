@@ -4,4 +4,4 @@ model {
 	Estado estado
 }
 
-json g.render(estado, [resolveTemplate: false])
+json g.render(estado, [deep: true])

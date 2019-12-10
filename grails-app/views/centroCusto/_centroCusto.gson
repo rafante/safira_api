@@ -4,4 +4,4 @@ model {
 	CentroCusto centroCusto
 }
 
-json g.render(centroCusto, [resolveTemplate: false])
+json g.render(centroCusto, [deep: true])

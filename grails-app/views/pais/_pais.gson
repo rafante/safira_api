@@ -4,4 +4,4 @@ model {
 	Pais pais
 }
 
-json g.render(pais, [resolveTemplate: false])
+json g.render(pais, [deep: true])

@@ -4,4 +4,4 @@ model {
 	UnidadeMedida unidadeMedida
 }
 
-json g.render(unidadeMedida, [resolveTemplate: false])
+json g.render(unidadeMedida, [deep: true])

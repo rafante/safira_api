@@ -4,4 +4,4 @@ model {
 	Municipio municipio
 }
 
-json g.render(municipio, [resolveTemplate: false])
+json g.render(municipio, [deep: true])

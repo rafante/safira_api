@@ -4,4 +4,4 @@ model {
 	GrupoTributacao grupoTributacao
 }
 
-json g.render(grupoTributacao, [resolveTemplate: false])
+json g.render(grupoTributacao, [deep: true])

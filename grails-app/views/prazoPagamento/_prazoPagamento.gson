@@ -4,4 +4,4 @@ model {
 	PrazoPagamento prazoPagamento
 }
 
-json g.render(prazoPagamento, [resolveTemplate: false])
+json g.render(prazoPagamento, [deep: true])

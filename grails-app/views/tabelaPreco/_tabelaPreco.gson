@@ -4,4 +4,4 @@ model {
 	TabelaPreco tabelaPreco
 }
 
-json g.render(tabelaPreco, [resolveTemplate: false])
+json g.render(tabelaPreco, [deep: true])

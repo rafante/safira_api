@@ -4,4 +4,4 @@ model {
 	HistoricoContato historicoContato
 }
 
-json g.render(historicoContato, [resolveTemplate: false])
+json g.render(historicoContato, [deep: true])

@@ -4,4 +4,4 @@ model {
 	ParceiroNegocios parceiroNegocios
 }
 
-json g.render(parceiroNegocios, [resolveTemplate: false])
+json g.render(parceiroNegocios, [deep: true])
