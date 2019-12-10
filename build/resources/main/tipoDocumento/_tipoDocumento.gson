@@ -1,7 +1,0 @@
-import br.com.eliteconsult.cadastros.TipoDocumento
-
-model {
-	TipoDocumento tipoDocumento
-}
-
-json g.render(tipoDocumento, [resolveTemplate: false])

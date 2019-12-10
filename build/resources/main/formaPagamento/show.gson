@@ -1,7 +1,0 @@
-import br.com.eliteconsult.cadastros.FormaPagamento
-
-model {
-	FormaPagamento formaPagamento
-}
-
-json tmpl.formaPagamento(formaPagamento)

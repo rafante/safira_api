@@ -1,7 +1,0 @@
-import br.com.eliteconsult.cadastros.GrupoTributacao
-
-model {
-	GrupoTributacao grupoTributacao
-}
-
-json tmpl.grupoTributacao(grupoTributacao)

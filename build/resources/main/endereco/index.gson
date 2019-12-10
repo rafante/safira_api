@@ -1,8 +1,0 @@
-import br.com.eliteconsult.cadastros.Endereco
-
-model {
-	Iterable<Endereco> enderecoList
-}
-
-json tmpl.endereco(enderecoList ?: [])
-

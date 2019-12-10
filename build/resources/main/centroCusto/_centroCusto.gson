@@ -1,7 +1,0 @@
-import br.com.eliteconsult.cadastros.CentroCusto
-
-model {
-	CentroCusto centroCusto
-}
-
-json g.render(centroCusto, [resolveTemplate: false])

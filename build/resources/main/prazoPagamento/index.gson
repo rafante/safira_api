@@ -1,8 +1,0 @@
-import br.com.eliteconsult.cadastros.PrazoPagamento
-
-model {
-	Iterable<PrazoPagamento> prazoPagamentoList
-}
-
-json tmpl.prazoPagamento(prazoPagamentoList ?: [])
-

@@ -1,8 +1,0 @@
-import br.com.eliteconsult.cadastros.Pais
-
-model {
-	Iterable<Pais> paisList
-}
-
-json tmpl.pais(paisList ?: [])
-

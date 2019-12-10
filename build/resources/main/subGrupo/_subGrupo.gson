@@ -1,7 +1,0 @@
-import br.com.eliteconsult.cadastros.SubGrupo
-
-model {
-	SubGrupo subGrupo
-}
-
-json g.render(subGrupo, [resolveTemplate: false])

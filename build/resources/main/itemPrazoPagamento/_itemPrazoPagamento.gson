@@ -1,7 +1,0 @@
-import br.com.eliteconsult.cadastros.ItemPrazoPagamento
-
-model {
-	ItemPrazoPagamento itemPrazoPagamento
-}
-
-json g.render(itemPrazoPagamento, [resolveTemplate: false])

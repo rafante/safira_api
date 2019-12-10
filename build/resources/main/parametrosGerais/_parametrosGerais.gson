@@ -1,7 +1,0 @@
-import br.com.eliteconsult.cadastros.ParametrosGerais
-
-model {
-	ParametrosGerais parametrosGerais
-}
-
-json g.render(parametrosGerais, [resolveTemplate: false])

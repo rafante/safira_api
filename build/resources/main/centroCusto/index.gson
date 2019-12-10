@@ -1,8 +1,0 @@
-import br.com.eliteconsult.cadastros.CentroCusto
-
-model {
-	Iterable<CentroCusto> centroCustoList
-}
-
-json tmpl.centroCusto(centroCustoList ?: [])
-
