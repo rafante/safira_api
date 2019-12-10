@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.SaidaMaterial
+
+model {
+	SaidaMaterial saidaMaterial
+}
+
+json tmpl.saidaMaterial(saidaMaterial)

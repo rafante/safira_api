@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.ItemEntrada
+
+model {
+	ItemEntrada itemEntrada
+}
+
+json g.render(itemEntrada, [deep: true])

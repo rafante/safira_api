@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.LDM
+
+model {
+	Iterable<LDM> LDMList
+}
+
+json tmpl.LDM(LDMList ?: [])
+

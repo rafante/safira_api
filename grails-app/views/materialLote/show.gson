@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.MaterialLote
+
+model {
+	MaterialLote materialLote
+}
+
+json tmpl.materialLote(materialLote)

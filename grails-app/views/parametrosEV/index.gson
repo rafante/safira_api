@@ -1,0 +1,8 @@
+import br.com.eliteconsult.ev.ParametrosEV
+
+model {
+	Iterable<ParametrosEV> parametrosEVList
+}
+
+json tmpl.parametrosEV(parametrosEVList ?: [])
+

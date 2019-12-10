@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.ItemContaPagar
+
+model {
+	ItemContaPagar itemContaPagar
+}
+
+json tmpl.itemContaPagar(itemContaPagar)

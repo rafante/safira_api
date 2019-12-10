@@ -1,0 +1,8 @@
+import br.com.eliteconsult.config.Periodicidade
+
+model {
+	Iterable<Periodicidade> periodicidadeList
+}
+
+json tmpl.periodicidade(periodicidadeList ?: [])
+

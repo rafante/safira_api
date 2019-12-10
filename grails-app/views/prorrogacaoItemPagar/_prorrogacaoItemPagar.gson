@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.ProrrogacaoItemPagar
+
+model {
+	ProrrogacaoItemPagar prorrogacaoItemPagar
+}
+
+json g.render(prorrogacaoItemPagar, [deep: true])

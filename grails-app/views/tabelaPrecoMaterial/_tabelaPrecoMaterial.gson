@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.TabelaPrecoMaterial
+
+model {
+	TabelaPrecoMaterial tabelaPrecoMaterial
+}
+
+json g.render(tabelaPrecoMaterial, [deep: true])

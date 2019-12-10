@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.ContaPagar
+
+model {
+	Iterable<ContaPagar> contaPagarList
+}
+
+json tmpl.contaPagar(contaPagarList ?: [])
+

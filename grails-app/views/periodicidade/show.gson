@@ -1,0 +1,7 @@
+import br.com.eliteconsult.config.Periodicidade
+
+model {
+	Periodicidade periodicidade
+}
+
+json tmpl.periodicidade(periodicidade)

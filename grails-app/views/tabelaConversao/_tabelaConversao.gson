@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.TabelaConversao
+
+model {
+	TabelaConversao tabelaConversao
+}
+
+json g.render(tabelaConversao, [deep: true])

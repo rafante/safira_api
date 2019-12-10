@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.HistoricoCustoMaterial
+
+model {
+	HistoricoCustoMaterial historicoCustoMaterial
+}
+
+json g.render(historicoCustoMaterial, [deep: true])

@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.Recipiente
+
+model {
+	Recipiente recipiente
+}
+
+json g.render(recipiente, [deep: true])

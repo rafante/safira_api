@@ -1,0 +1,8 @@
+import br.com.eliteconsult.seguranca.Usuario
+
+model {
+	Iterable<Usuario> usuarioList
+}
+
+json tmpl.usuario(usuarioList ?: [])
+

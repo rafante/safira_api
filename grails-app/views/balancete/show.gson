@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.Balancete
+
+model {
+	Balancete balancete
+}
+
+json tmpl.balancete(balancete)

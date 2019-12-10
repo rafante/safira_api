@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.ItemEntrada
+
+model {
+	Iterable<ItemEntrada> itemEntradaList
+}
+
+json tmpl.itemEntrada(itemEntradaList ?: [])
+

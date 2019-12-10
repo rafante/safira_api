@@ -1,0 +1,8 @@
+import br.com.eliteconsult.servicos.TipoServico
+
+model {
+	Iterable<TipoServico> tipoServicoList
+}
+
+json tmpl.tipoServico(tipoServicoList ?: [])
+

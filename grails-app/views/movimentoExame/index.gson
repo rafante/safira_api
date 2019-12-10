@@ -1,0 +1,8 @@
+import br.com.eliteconsult.ev.MovimentoExame
+
+model {
+	Iterable<MovimentoExame> movimentoExameList
+}
+
+json tmpl.movimentoExame(movimentoExameList ?: [])
+

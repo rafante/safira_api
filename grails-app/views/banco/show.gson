@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.Banco
+
+model {
+	Banco banco
+}
+
+json tmpl.banco(banco)

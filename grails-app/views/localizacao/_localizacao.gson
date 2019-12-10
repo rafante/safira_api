@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.Localizacao
+
+model {
+	Localizacao localizacao
+}
+
+json g.render(localizacao, [deep: true])

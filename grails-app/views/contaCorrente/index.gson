@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.ContaCorrente
+
+model {
+	Iterable<ContaCorrente> contaCorrenteList
+}
+
+json tmpl.contaCorrente(contaCorrenteList ?: [])
+

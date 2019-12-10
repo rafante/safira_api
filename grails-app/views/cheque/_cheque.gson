@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.Cheque
+
+model {
+	Cheque cheque
+}
+
+json g.render(cheque, [deep: true])
