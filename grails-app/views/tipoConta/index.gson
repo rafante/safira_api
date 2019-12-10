@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.TipoConta
+
+model {
+	Iterable<TipoConta> tipoContaList
+}
+
+json tmpl.tipoConta(tipoContaList ?: [])
+

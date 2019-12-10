@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.CompensacaoItemPagar
+
+model {
+	Iterable<CompensacaoItemPagar> compensacaoItemPagarList
+}
+
+json tmpl.compensacaoItemPagar(compensacaoItemPagarList ?: [])
+

@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.ParametrosMateriais
+
+model {
+	ParametrosMateriais parametrosMateriais
+}
+
+json g.render(parametrosMateriais, [deep: true])

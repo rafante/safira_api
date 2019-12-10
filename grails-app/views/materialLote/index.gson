@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.MaterialLote
+
+model {
+	Iterable<MaterialLote> materialLoteList
+}
+
+json tmpl.materialLote(materialLoteList ?: [])
+

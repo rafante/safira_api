@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.ItemContaReceber
+
+model {
+	Iterable<ItemContaReceber> itemContaReceberList
+}
+
+json tmpl.itemContaReceber(itemContaReceberList ?: [])
+

@@ -1,0 +1,7 @@
+import br.com.eliteconsult.seguranca.Perfil
+
+model {
+	Perfil perfil
+}
+
+json tmpl.perfil(perfil)

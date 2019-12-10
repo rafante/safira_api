@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.HistoricoPadrao
+
+model {
+	Iterable<HistoricoPadrao> historicoPadraoList
+}
+
+json tmpl.historicoPadrao(historicoPadraoList ?: [])
+

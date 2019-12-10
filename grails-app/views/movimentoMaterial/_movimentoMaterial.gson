@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.MovimentoMaterial
+
+model {
+	MovimentoMaterial movimentoMaterial
+}
+
+json g.render(movimentoMaterial, [deep: true])

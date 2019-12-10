@@ -1,0 +1,7 @@
+import br.com.eliteconsult.ev.MovimentoExame
+
+model {
+	MovimentoExame movimentoExame
+}
+
+json tmpl.movimentoExame(movimentoExame)

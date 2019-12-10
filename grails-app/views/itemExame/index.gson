@@ -1,0 +1,8 @@
+import br.com.eliteconsult.ev.ItemExame
+
+model {
+	Iterable<ItemExame> itemExameList
+}
+
+json tmpl.itemExame(itemExameList ?: [])
+

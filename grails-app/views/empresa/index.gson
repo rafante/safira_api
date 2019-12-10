@@ -1,0 +1,8 @@
+import br.com.eliteconsult.cadastros.Empresa
+
+model {
+	Iterable<Empresa> empresaList
+}
+
+json tmpl.empresa(empresaList ?: [])
+

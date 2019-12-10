@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.ItemMovimentoMaterial
+
+model {
+	Iterable<ItemMovimentoMaterial> itemMovimentoMaterialList
+}
+
+json tmpl.itemMovimentoMaterial(itemMovimentoMaterialList ?: [])
+

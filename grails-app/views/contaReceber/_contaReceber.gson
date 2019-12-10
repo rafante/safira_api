@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.ContaReceber
+
+model {
+	ContaReceber contaReceber
+}
+
+json g.render(contaReceber, [deep: true])

@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.ParametrosMateriais
+
+model {
+	Iterable<ParametrosMateriais> parametrosMateriaisList
+}
+
+json tmpl.parametrosMateriais(parametrosMateriaisList ?: [])
+

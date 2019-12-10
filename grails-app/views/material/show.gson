@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.Material
+
+model {
+	Material material
+}
+
+json tmpl.material(material)

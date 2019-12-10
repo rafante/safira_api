@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.CompensacaoItemPagar
+
+model {
+	CompensacaoItemPagar compensacaoItemPagar
+}
+
+json g.render(compensacaoItemPagar, [deep: true])

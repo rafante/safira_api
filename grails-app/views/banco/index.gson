@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.Banco
+
+model {
+	Iterable<Banco> bancoList
+}
+
+json tmpl.banco(bancoList ?: [])
+

@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.TabelaPrecoMaterial
+
+model {
+	Iterable<TabelaPrecoMaterial> tabelaPrecoMaterialList
+}
+
+json tmpl.tabelaPrecoMaterial(tabelaPrecoMaterialList ?: [])
+

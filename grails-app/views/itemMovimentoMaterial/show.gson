@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.ItemMovimentoMaterial
+
+model {
+	ItemMovimentoMaterial itemMovimentoMaterial
+}
+
+json tmpl.itemMovimentoMaterial(itemMovimentoMaterial)

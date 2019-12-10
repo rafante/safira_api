@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.ItemSaida
+
+model {
+	Iterable<ItemSaida> itemSaidaList
+}
+
+json tmpl.itemSaida(itemSaidaList ?: [])
+

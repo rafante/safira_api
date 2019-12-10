@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.TransferenciaConta
+
+model {
+	TransferenciaConta transferenciaConta
+}
+
+json tmpl.transferenciaConta(transferenciaConta)

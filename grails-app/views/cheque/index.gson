@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.Cheque
+
+model {
+	Iterable<Cheque> chequeList
+}
+
+json tmpl.cheque(chequeList ?: [])
+

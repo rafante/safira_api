@@ -1,0 +1,7 @@
+import br.com.eliteconsult.financeiro.ItemContaReceber
+
+model {
+	ItemContaReceber itemContaReceber
+}
+
+json tmpl.itemContaReceber(itemContaReceber)

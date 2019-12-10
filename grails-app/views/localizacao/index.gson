@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.Localizacao
+
+model {
+	Iterable<Localizacao> localizacaoList
+}
+
+json tmpl.localizacao(localizacaoList ?: [])
+

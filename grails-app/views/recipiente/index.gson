@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.Recipiente
+
+model {
+	Iterable<Recipiente> recipienteList
+}
+
+json tmpl.recipiente(recipienteList ?: [])
+

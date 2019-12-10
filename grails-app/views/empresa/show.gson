@@ -1,0 +1,7 @@
+import br.com.eliteconsult.cadastros.Empresa
+
+model {
+	Empresa empresa
+}
+
+json tmpl.empresa(empresa)

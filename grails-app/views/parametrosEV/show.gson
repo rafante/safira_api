@@ -1,0 +1,7 @@
+import br.com.eliteconsult.ev.ParametrosEV
+
+model {
+	ParametrosEV parametrosEV
+}
+
+json tmpl.parametrosEV(parametrosEV)

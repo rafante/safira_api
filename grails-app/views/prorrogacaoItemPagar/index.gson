@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.ProrrogacaoItemPagar
+
+model {
+	Iterable<ProrrogacaoItemPagar> prorrogacaoItemPagarList
+}
+
+json tmpl.prorrogacaoItemPagar(prorrogacaoItemPagarList ?: [])
+

@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.SaidaMaterial
+
+model {
+	Iterable<SaidaMaterial> saidaMaterialList
+}
+
+json tmpl.saidaMaterial(saidaMaterialList ?: [])
+

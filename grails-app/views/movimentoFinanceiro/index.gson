@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.MovimentoFinanceiro
+
+model {
+	Iterable<MovimentoFinanceiro> movimentoFinanceiroList
+}
+
+json tmpl.movimentoFinanceiro(movimentoFinanceiroList ?: [])
+

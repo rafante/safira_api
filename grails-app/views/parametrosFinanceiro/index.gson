@@ -1,0 +1,8 @@
+import br.com.eliteconsult.financeiro.ParametrosFinanceiro
+
+model {
+	Iterable<ParametrosFinanceiro> parametrosFinanceiroList
+}
+
+json tmpl.parametrosFinanceiro(parametrosFinanceiroList ?: [])
+

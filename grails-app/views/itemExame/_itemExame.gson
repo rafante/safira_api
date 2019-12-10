@@ -1,0 +1,7 @@
+import br.com.eliteconsult.ev.ItemExame
+
+model {
+	ItemExame itemExame
+}
+
+json g.render(itemExame, [deep: true])

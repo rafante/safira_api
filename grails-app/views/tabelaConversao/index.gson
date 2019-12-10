@@ -1,0 +1,8 @@
+import br.com.eliteconsult.materiais.TabelaConversao
+
+model {
+	Iterable<TabelaConversao> tabelaConversaoList
+}
+
+json tmpl.tabelaConversao(tabelaConversaoList ?: [])
+

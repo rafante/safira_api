@@ -1,0 +1,7 @@
+import br.com.eliteconsult.config.Widget
+
+model {
+	Widget widget
+}
+
+json tmpl.widget(widget)

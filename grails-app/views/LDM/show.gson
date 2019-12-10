@@ -1,0 +1,7 @@
+import br.com.eliteconsult.materiais.LDM
+
+model {
+	LDM LDM
+}
+
+json tmpl.LDM(LDM)
