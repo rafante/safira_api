@@ -1,7 +1,0 @@
-import br.com.eliteconsult.materiais.NCM
-
-model {
-	NCM NCM
-}
-
-json g.render(NCM, [deep: true])

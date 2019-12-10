@@ -9,6 +9,7 @@ import br.com.eliteconsult.config.Periodicidade
 import br.com.eliteconsult.financeiro.ContaCorrente
 import br.com.eliteconsult.financeiro.ContaPagar
 import br.com.eliteconsult.financeiro.PlanoContas
+import br.com.eliteconsult.materiais.StatusEntrada
 
 public class EntradaMaterial {
 
@@ -75,6 +76,10 @@ public class EntradaMaterial {
                 return ['entradaMaterial.mensagens.contaPagarCompensada']
             }
         })
+    }
+
+    static  mapping = {
+        status enumType: 'string'
     }
 
     boolean canEdit() {

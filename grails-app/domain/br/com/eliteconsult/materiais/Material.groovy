@@ -173,6 +173,7 @@ public class Material {
         abaixoEstoqueMinimo formula: 'CASE WHEN estoque < estoque_minimo THEN 1 ELSE 0 END'
         acimaEstoqueMaximo formula: 'CASE WHEN estoque > estoque_maximo THEN 1 ELSE 0 END'
         custo_total scale: 5
+        finalidade enumType: 'string'
     }
 
     String toString() {

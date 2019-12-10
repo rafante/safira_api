@@ -1,6 +1,7 @@
 package br.com.eliteconsult.materiais
 
 import grails.gorm.services.Service
+import  br.com.eliteconsult.materiais.Finalidade
 
 @Service(Material)
 interface MaterialService {

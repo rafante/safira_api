@@ -1,7 +1,8 @@
 import br.com.eliteconsult.materiais.Material
+import br.com.eliteconsult.materiais.Finalidade
 
 model {
 	Material material
 }
 
-json g.render(material, [deep: true])
+json g.render(material, [expand: ['grupo', 'sub_grupo', 'grupo_tributacao', 'localizacao', 'unidade_medida', 'tipo_servico']])
