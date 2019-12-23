@@ -1,3 +1,6 @@
+import com.bmuschko.gradle.docker.tasks.image.Dockerfile
+import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
+
 buildscript {
     repositories {
         maven { url "https://repo.grails.org/grails/core" }
@@ -6,6 +9,7 @@ buildscript {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "org.grails.plugins:hibernate5:7.0.0"
         classpath "org.grails.plugins:views-gradle:2.0.0.BUILD-SNAPSHOT"
+        classpath 'com.bmuschko:gradle-docker-plugin:6.0.0'
     }
 }
 
@@ -17,6 +21,7 @@ apply plugin:"idea"
 apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.plugins.views-json"
+apply plugin:"com.bmuschko.docker-remote-api"
 
 repositories {
     maven { url "https://repo.grails.org/grails/core" }
@@ -76,4 +81,18 @@ bootRun {
     sourceResources sourceSets.main
     String springProfilesActive = 'spring.profiles.active'
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
+}
+
+ext {
+    dockerTag = "grails-sample/${project.name}:${project.version}".toLowerCase() 
+    dockerBuildDir = mkdir("${buildDir}/docker") 
+}
+task prepareDocker(type: Copy, dependsOn: assemble) { 
+    description = 'Copy files from src/main/docker and application jar to Docker temporal build directory'
+    group = 'Docker'
+
+    from 'src/main/docker'
+    from project.jar
+
+    into dockerBuildDir
 }
