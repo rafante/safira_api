@@ -96,3 +96,6 @@ task prepareDocker(type: Copy, dependsOn: assemble) {
 
     into dockerBuildDir
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
