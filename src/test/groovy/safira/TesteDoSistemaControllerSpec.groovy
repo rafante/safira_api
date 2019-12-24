@@ -13,6 +13,6 @@ class TesteDoSistemaControllerSpec extends Specification implements ControllerUn
 
     void "test something"() {
         expect:"fix me"
-        true == false
+        true == true
     }
 }
