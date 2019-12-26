@@ -1,6 +1,7 @@
 steps:
     - name: 'openjdk:8-jdk'
       args: ['bash', './myscript.bash']
+    images: ['gcr.io/$PROJECT_ID/safira-api']
 # In this directory, run the following command to build this builder.
 # $ gcloud builds submit . --config=cloudbuild.yaml
 
