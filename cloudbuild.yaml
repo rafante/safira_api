@@ -1,3 +1,26 @@
 steps:
     - name: 'openjdk:8-jdk'
       args: ['bash', './myscript.bash']
+# In this directory, run the following command to build this builder.
+# $ gcloud builds submit . --config=cloudbuild.yaml
+
+# steps:
+#     - name: 'gcr.io/cloud-builders/docker'
+#       args: ['build', '--tag=gcr.io/$PROJECT_ID/gcloud-gradle', '.']
+#     # Simple sanity check: invoke java to confirm that it was installed correctly.
+#     - name: 'gcr.io/$PROJECT_ID/gcloud-gradle'
+#       args: ['java', '-version']
+#     # Simple sanity check: invoke gcloud to confirm that it was installed correctly.
+#     - name: 'gcr.io/$PROJECT_ID/gcloud-gradle'
+#       args: ['gcloud', 'projects', 'list']
+#     # Simple sanity check: invoke maven to confirm that it was installed correctly.
+#     - name: 'gcr.io/$PROJECT_ID/gcloud-gradle'
+#       args: ['mvn', '--version']
+    
+#     images: ['gcr.io/$PROJECT_ID/gcloud-maven']
+    
+#     timeout: 1200s
+# steps:
+#     - name: 'gcr.io/cloud-builders/gradle'
+#       args: ['appengineDeploy']
+# timeout: 1600s

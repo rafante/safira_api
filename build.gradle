@@ -10,7 +10,7 @@ buildscript {
         classpath "org.grails.plugins:hibernate5:7.0.0"
         classpath "org.grails.plugins:views-gradle:2.0.0.BUILD-SNAPSHOT"
         classpath 'com.bmuschko:gradle-docker-plugin:6.0.0'
-        classpath 'com.google.cloud.tools:appengine-gradle-plugin:1.3.2'
+        classpath 'com.google.cloud.tools:appengine-gradle-plugin:1.+'
     }
 }
 
@@ -70,6 +70,8 @@ dependencies {
     runtime 'mysql:mysql-connector-java:8.0.16'
     runtime 'com.google.cloud.sql:mysql-socket-factory-connector-j-8:1.0.14'
     runtime "javax.xml.bind:jaxb-api:2.3.0"
+    compile 'com.google.cloud:google-cloud:+'
+    compile 'com.google.appengine:appengine-api-1.0-sdk:+'
     testCompile "org.grails:grails-gorm-testing-support"
     testCompile "org.mockito:mockito-core"
     testCompile "io.micronaut:micronaut-http-client"
