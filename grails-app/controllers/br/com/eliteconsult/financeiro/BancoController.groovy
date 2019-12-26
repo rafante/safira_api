@@ -27,6 +27,10 @@ class BancoController {
         respond bancoService.get(id)
     }
 
+    def teste(){
+        respond {}
+    }
+
     @Transactional
     def save(Banco banco) {
         if (banco == null) {
