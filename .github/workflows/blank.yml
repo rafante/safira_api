@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Clean no projeto
-      run: ./gradlew clean
+      run: ./gradlew tasks --stacktrace
     - name: Vê os tipos de tasks
       run: ./gradlew tasks,
     - name: Executa a task assemble
