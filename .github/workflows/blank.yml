@@ -15,7 +15,7 @@ jobs:
     - name: Clean no projeto
       run: ./gradlew tasks --stacktrace
     - name: Vê os tipos de tasks
-      run: ./gradlew tasks,
+      run: ./gradlew clean
     - name: Executa a task assemble
       run:  ./gradlew assemble
     - name: Finalizar
