@@ -14,8 +14,10 @@ jobs:
     - uses: actions/checkout@v1
     - name: Clean no projeto
       run: ./gradlew clean
-    - name: build
-      run: |
-        ./gradlew tasks,
-        ./gradlew assemble
-        echo fechou.
+    - name: Vê os tipos de tasks
+      run: ./gradlew tasks,
+    - name: Executa a task assemble
+      run:  ./gradlew assemble
+    - name: Finalizar
+      run: echo Fim
+      
