@@ -16,5 +16,5 @@ jobs:
       run: ./gradlew clean
     - name: build
       run: |
-        ./gradle assemble,
+        ./gradlew assemble,
         echo fechou.
