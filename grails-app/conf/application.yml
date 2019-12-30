@@ -110,8 +110,6 @@ environments:
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
             username: root
             password: SafiraLabApp
-            dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-            driverClassName: com.mysql.cj.jdbc.Driver
             properties:
                 initialSize: 5
                 maxActive: 50
