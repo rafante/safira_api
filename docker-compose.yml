@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  safira_api:
+    image: safira_api
+    build: .
+    ports:
+      - 8080:8080

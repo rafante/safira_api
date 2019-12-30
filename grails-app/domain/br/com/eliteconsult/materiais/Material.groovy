@@ -87,7 +87,7 @@ public class Material {
          * C�digo EAN.
          * Tamanho 20.
          */
-        ean(size: 0..20)
+        ean(size: 0..20, nullable: true)
 
         estoque(scale: 5, nullable: false)
         estoque_inicial(scale: 5, nullable: false)
