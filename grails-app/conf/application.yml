@@ -88,7 +88,7 @@ environments:
         dataSource:
             pooled: true
             dbCreate: update
-            url: jdbc:mysql://mysql-container:3306/safira
+            url: jdbc:mysql://localhost:3306/safira
             driverClassName: com.mysql.cj.jdbc.Driver
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
             username: root
@@ -104,6 +104,6 @@ environments:
             url: jdbc:mysql://mysql-container:3306/safira
             driverClassName: com.mysql.cj.jdbc.Driver
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-            username: root
+            username: safira
             password: SafiraLabApp
     
