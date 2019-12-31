@@ -89,7 +89,7 @@ environments:
             pooled: true
             dbCreate: update
             url: jdbc:mysql://mysql-container:3306/safira
-            driverClassName: com.mysql.jdbc.Driver
+            driverClassName: com.mysql.cj.jdbc.Driver
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
             username: root
             password: SafiraLabApp
@@ -102,7 +102,7 @@ environments:
             pooled: true
             dbCreate: update
             url: jdbc:mysql://mysql-container:3306/safira
-            driverClassName: com.mysql.jdbc.Driver
+            driverClassName: com.mysql.cj.jdbc.Driver
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
             username: root
             password: SafiraLabApp
