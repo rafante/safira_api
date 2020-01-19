@@ -1,6 +1,8 @@
 ---
 grails:
     profile: rest-api
+    cors:
+        enabled: true
     codegen:
         defaultPackage: safira
     gorm:
@@ -104,6 +106,6 @@ environments:
             url: jdbc:mysql://mysql-container:3306/safira
             driverClassName: com.mysql.cj.jdbc.Driver
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-            username: root
+            username: safiraBanco
             password: SafiraLabApp
     
