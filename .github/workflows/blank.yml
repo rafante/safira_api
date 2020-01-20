@@ -12,12 +12,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Clean no projeto
-      run: ./gradlew tasks --stacktrace
-    - name: Vê os tipos de tasks
-      run: ./gradlew clean
-    - name: Executa a task assemble
-      run:  ./gradlew assemble
-    - name: Finalizar
+    - uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.CHAVE }}
+        script: |
+          whoami
+          dev/safiravm/reset.sh
+    - name: Final
       run: echo Fim
-      
