@@ -10,10 +10,10 @@ import br.com.eliteconsult.servicos.TipoServico
 
 public class Material {
 
-    String apelido
+    String apelido = ''
     BigDecimal custo_total = 0
-    String descricao
-    String ean
+    String descricao = ''
+    String ean = ''
     BigDecimal estoque = 0
     BigDecimal estoque_inicial = 0
     BigDecimal estoque_minimo = 0
@@ -21,19 +21,19 @@ public class Material {
     BigDecimal estoque_maximo = 0
     BigDecimal fator_estoque_maximo = 0
     BigDecimal peso = 0
-    String observacoes
+    String observacoes = ''
     BigDecimal ponto_pedido = 0
     BigDecimal fator_ponto_pedido = 0
-    TipoMaterial tipo_material
-    Finalidade finalidade
-    String cod_barra
-    String ex_ipi
-    String cod_gen
+    TipoMaterial tipo_material = TipoMaterial.NORMAL
+    Finalidade finalidade = Finalidade.MATERIA_PRIMA
+    String cod_barra = ''
+    String ex_ipi = ''
+    String cod_gen = ''
     BigDecimal aliq_icms = 0
-    Boolean vendido_separadamente
-    Boolean abaixoEstoqueMinimo
-    Boolean acimaEstoqueMaximo
-    Boolean controleLoteValidade
+    Boolean vendido_separadamente = false
+    Boolean abaixoEstoqueMinimo = false
+    Boolean acimaEstoqueMaximo = false
+    Boolean controleLoteValidade = false
     String textoFinalidade = ""
 
     static transients = ["estoqueDisponivel", "unidadesMedidaPossiveisUI", "textoFinalidade", "valorEstoque"]
