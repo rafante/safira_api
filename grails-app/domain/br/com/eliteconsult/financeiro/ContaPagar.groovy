@@ -20,24 +20,6 @@ public class ContaPagar extends FinanceiroBase{
     }
 
     static constraints = {
-        empresa()
-        referencia()
-        parceiroNegocios(asgDefaultFilter: [fornecedor: true])
-        centroCusto()
-        planoContas(validator: { val, obj->
-            if(obj?.planoContas?.filhos?.size())
-                return ['financeiro.mensagens.PlanoContasPai']
-            if(obj?.planoContas?.natureza == null)
-                return ['financeiro.mensagens.natureza.invalida']
-            if(obj?.planoContas?.natureza == Natureza.RECEITA)
-                return ['financeiro.mensagens.natureza.nao.permitida']
-        })
-        descricao(blank: false, nullable: false)
-        dataEmissao()
-        dataDocumento()
         itensContaPagar(cascade: 'all-delete-orphan')
-        tipoDocumento()
-        historicoPadrao()
-        boletoRecebido()
     }
 }

@@ -21,14 +21,6 @@ public class SaidaMaterial {
 
     static hasMany = [itemSaida: ItemSaida]
 
-    static constraints = {
-        data_saida()
-        observacao()
-        status(blank: false, nullable: false)
-        itemSaida()
-        centroCusto(nullable: false)
-    }
-
     boolean canEdit() {
         return (status == StatusSaida.PENDENTE)
     }

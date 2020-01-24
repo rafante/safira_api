@@ -12,7 +12,6 @@ class ItemExame{
 
     static constraints = {
         material(nullable: false, unique: ['exame'])
-        exame(nullable: false)
     }
 
     @Override

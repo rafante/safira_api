@@ -10,11 +10,6 @@ class CentroCusto {
     static hasMany = [filhos: CentroCusto]
     static transients = ['temFilhos']
 
-    static constraints = {
-        codigo()
-        descricao(size: 0..60)
-    }
-
     Boolean getTemFilhos(){
         return filhos?.size()
     }

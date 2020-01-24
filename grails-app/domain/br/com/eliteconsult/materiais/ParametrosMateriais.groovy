@@ -5,13 +5,6 @@ public class ParametrosMateriais {
     TipoCalculoCustoEntrada tipoCalculoCustoEntradaDefault = TipoCalculoCustoEntrada.ULTIMO_CUSTO
     Integer mesesCalculoEstoquePA = 6 // PA = Produto Acabadp
     Integer mesesCalculoEstoquePP = 6 // PP = Para Produção
-
-    static constraints = {
-        tipoCalculoCustoEntradaDefault()
-        mesesCalculoEstoquePA()
-        mesesCalculoEstoquePP()
-    }
-
 }
 
 enum TipoCalculoCustoEntrada {

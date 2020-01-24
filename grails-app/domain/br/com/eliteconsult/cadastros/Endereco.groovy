@@ -26,48 +26,6 @@ public class Endereco {
     static defaultValueField = "logradouro"
     static defaultFilterFields = "logradouro;bairro"
 
-    static constraints = {
-
-        /**
-         * Tamanho 60
-         */
-        logradouro(size: 0..60, nullable: false)
-        /**
-         * Tamanho 10
-         */
-        numero(size: 0..10, nullable: false)
-        /**
-         * Tamanho 10
-         */
-        complemento(size: 0..10, nullable: false)
-        /**
-         * Tamanho 20
-         */
-        bairro(size: 0..60, nullable: false)
-        municipio( nullable: false, size: 0..60)
-        /**
-         * Tamanho 8
-         */
-        cep(size: 0..8, nullable: false)
-
-        /**
-         * Tamanho 60
-         */
-        contato(size: 0..60)
-        /**
-         * Tamanho 60
-         */
-        email(size: 0..60)
-        /**
-         * Tamanho 15
-         */
-        telefone1(size: 0..15)
-        /**
-         * Tamanho 15
-         */
-        telefone2(size: 0..15)
-    }
-
     String getUf() {
         return municipio?.estado?.sigla
     }

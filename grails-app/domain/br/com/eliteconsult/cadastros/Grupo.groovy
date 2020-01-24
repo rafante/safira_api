@@ -8,10 +8,6 @@ class Grupo {
 
     static defaultValueField = "descricao"
     static defaultFilterFields = "descricao"
-    
-    static constraints = {
-        descricao(size: 0..60)
-    }
 
     String toString() {
         return descricao

@@ -8,22 +8,4 @@ public class HistoricoContato {
 
     static belongsTo = [parceiroNegocios: ParceiroNegocios]
 
-    static constraints = {
-        parceiroNegocios(asgDefaultFilter: [cliente: true])
-
-        /**
-         * Data do contato
-         */
-        data()
-        /**
-         * Descri��o do contato.
-         * Tamanho 255.
-         */
-        historico()
-        /**
-         * Nome de contato.
-         */
-        contato()
-    }
-
 }

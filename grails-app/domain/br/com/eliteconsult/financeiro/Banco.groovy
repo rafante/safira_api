@@ -7,9 +7,6 @@ class Banco {
 
     static defaultAutoCompleteFields = "codigo;descricao"
 
-    static constraints = {
-    }
-
     String toString(){
         descricao
     }

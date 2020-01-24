@@ -55,29 +55,6 @@ public class EntradaMaterial {
 
     static hasMany = [itemEntrada: ItemEntrada]
 
-    static constraints = {
-        data_entrada()
-        frete()
-        data_pedido_compra()
-        num_pedido_compra()
-        fornecedor(blank: false, nullable: false, asgDefaultFilter: [fornecedor: true])
-        observacao()
-        prazo_pagamento()
-        status(blank: false, nullable: false, size: 0..13)
-        itemEntrada()
-        documento(size: 0..20)
-        contaCorrente()
-        planoContas(validator: { val, obj->
-            if(obj?.planoContas?.planoContas == null)
-                return ['entradaMaterial.mensagens.PlanoContasPai']
-        })
-        contaPagar(validator: { val, obj ->
-            if (obj.contaPagar && !obj.contaPagar?.canDelete()) {
-                return ['entradaMaterial.mensagens.contaPagarCompensada']
-            }
-        })
-    }
-
     static  mapping = {
         status enumType: 'string'
     }

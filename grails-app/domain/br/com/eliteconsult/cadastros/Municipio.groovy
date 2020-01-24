@@ -12,7 +12,6 @@ class Municipio {
     static defaultFilterFields = "nome"
 
     static constraints = {
-        nome(size: 0..60, blank: false, nullable: false)
         estado(cascade: 'save-update', blank: false, nullable: false)
     }
 

@@ -10,11 +10,6 @@ class Perfil {
         dinamico defaultValue: true
     }
 
-    static constraints = {
-        authority blank: false, unique: true
-        dinamico blank: false, nullable: false
-    }
-
     String toString() {
         return authority
     }

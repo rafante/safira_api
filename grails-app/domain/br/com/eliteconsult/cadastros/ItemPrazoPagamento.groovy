@@ -7,15 +7,6 @@ public class ItemPrazoPagamento {
 
     static belongsTo = [prazoPagamento: PrazoPagamento]
 
-    static constraints = {
-        percentual(scale: 2)
-
-        /**
-         * N�mero de dias de prazo.
-         */
-        prazo()
-    }
-
     String toString() {
         return prazo
     }

@@ -26,9 +26,6 @@ public class Usuario {
 
     static constraints = {
         username blank: false, unique: true
-        password blank: false
-        nome blank: false
-        empresa blank: false
     }
 
     static mapping = {

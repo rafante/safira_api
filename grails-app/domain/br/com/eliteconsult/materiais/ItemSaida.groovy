@@ -17,18 +17,6 @@ public class ItemSaida {
 
     static hasMany = [movimento_material: MovimentoMaterial]
 
-    static constraints = {
-        item()
-        material()
-        quantidade(scale: 2)
-
-        /**
-         * Tamanho 5
-         */
-        unidade_medida()
-        valor(scale: 2)
-    }
-
     def beforeInsert = {
         def maxitem = withCriteria {
             projections { max("item") }

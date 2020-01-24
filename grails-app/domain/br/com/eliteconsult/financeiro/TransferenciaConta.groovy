@@ -16,13 +16,6 @@ public class TransferenciaConta {
     ]
 
     static constraints = {
-        valor(scale: 2)
-        contaCorrenteDestino(nullable: false, validator: {val, obj ->
-            return val.id != obj.contaCorrenteOrigem.id
-        })
-        contaCorrenteOrigem(nullable: false, validator: { val, obj ->
-            return val.id != obj.contaCorrenteDestino.id
-        })
         movimentoFinanceiro(cascade: 'all-delete-orphan')
     }
 

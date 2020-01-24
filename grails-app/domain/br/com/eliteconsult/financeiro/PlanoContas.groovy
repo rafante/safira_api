@@ -14,12 +14,6 @@ class PlanoContas {
     static hasMany = [filhos: PlanoContas]
     static transients = ['temFilhos']
 
-    static constraints = {
-        codigo()
-        descricao(size: 0..60)
-        natureza()
-    }
-
     String toString() {
         return codigo + " - " + descricao
     }

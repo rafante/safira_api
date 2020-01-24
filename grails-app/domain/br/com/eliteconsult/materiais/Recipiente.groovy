@@ -8,7 +8,6 @@ public class Recipiente {
     static defaultAutoCompleteFields = "codEv;descricao"
 
     static constraints = {
-        descricao size: 0..60
         codEv unique: true
     }
 

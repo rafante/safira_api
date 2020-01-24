@@ -6,11 +6,4 @@ public class HistoricoCustoMaterial {
 
     static belongsTo = [material: Material, entradaMaterial: EntradaMaterial]
 
-    static constraints = {
-        material()
-        data()
-        entradaMaterial()
-        custo_total()
-    }
-
 }

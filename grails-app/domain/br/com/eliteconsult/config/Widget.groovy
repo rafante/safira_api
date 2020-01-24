@@ -7,13 +7,4 @@ class Widget {
     String title
     String icon
     Integer span
-
-    static constraints = {
-        name()
-        template()
-        title()
-        icon()
-        span()
-    }
-
 }

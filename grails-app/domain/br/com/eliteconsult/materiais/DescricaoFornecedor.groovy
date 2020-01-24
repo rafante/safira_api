@@ -15,21 +15,6 @@ public class DescricaoFornecedor {
             material: Material,
             fornecedor: ParceiroNegocios]
 
-    static constraints = {
-
-        material()
-        fornecedor(asgDefaultFilter: [fornecedor: true])
-
-        /**
-         * C�digo do material no fornecedor
-         */
-        codigo()
-        /**
-         * Descri��o do material de acordo com o fornecedor.
-         */
-        descricao()
-    }
-
     String toString() {
         return descricao
     }

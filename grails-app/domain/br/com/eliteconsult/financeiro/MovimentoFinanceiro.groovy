@@ -28,20 +28,6 @@ class MovimentoFinanceiro {
 //    static transients = Persistente.transients + ["valorCredito", "valorDebito"]
 
     static constraints = {
-        descricao()
-        conciliado(nullable: false)
-        dataDocumento()
-        dataEmissao()
-        debito_credito(nullable: false)
-        historicoPadrao()
-        numeroDocumento()
-        planoContas(nullable: true)
-        contaCorrente(nullable: false)
-        formaPagamento()
-        tipoDocumento()
-        valor(scale: 2)
-        estornado(nullable: false)
-        eEstorno(nullable: false)
         movimentoFinanceiroEstorno(cascade: 'all-delete-orphan')
     }
 

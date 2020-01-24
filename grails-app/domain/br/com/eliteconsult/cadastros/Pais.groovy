@@ -10,7 +10,6 @@ class Pais {
     static constraints = {
         cod_pais(unique: true, size: 0..5)
         nome(shared: "nome")
-//        usuario(shared: "usuario")
     }
 
     String toString() {

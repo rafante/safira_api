@@ -35,47 +35,9 @@ class Empresa {
     static transients = ['documentoFormatado', 'uf', 'logradouro', 'cidade', '', 'bairro', 'numero']
 
     static constraints = {
-        empresa(nullable: true)
-        nome(size: 0..60)
-        apelido()
-        cnpj_cpf(unique: true, size: 0..14, blank: false, nullable: false,
-                validator: { val, obj ->
-
-                    val = val.trim()
-                    if (val.length() == 11) {
-                        if (!Utils.ValidaCpf(val)) return false
-                    } else if (val.length() == 14) {
-                        if (!Utils.ValidaCnpj(val)) return false
-                    } else return false
-
-                })
-
-        inscricao_estadual(size: 0..14)
         endereco_comercial(cascade: '   all-delete-orphan')
         endereco_cobranca(cascade: 'all-delete-orphan')
         endereco_entrega(cascade: 'all-delete-orphan')
-        cnae(nullable: true)
-        serial_certificado_digital(size: 0..100)
-
-        //SUFRAMA	Inscrição da pessoa jurídica na Suframa	C	009*	-
-        suframa(shared: "suframa")
-
-        //IND_NAT_PJ	Indicador da natureza da pessoa jurídica:
-        //00 – Pessoa jurídica em geral
-        //01 – Sociedade cooperativa
-        //02 – Entidade sujeita ao PIS/Pasep exclusivamente com base na Folha de Salários;	N	002*	-
-        ind_nat_pj(size: 2..2)
-
-        //IND_ATIV	Indicador de tipo de atividade preponderante:
-        //0 – Industrial ou equiparado a industrial;
-        //1 – Prestador de serviços;
-        //2 - Atividade de comércio;	N	001	-
-        //3 – Atividade financeira;
-        //4 – Atividade imobiliária;
-        //9 – Outros.
-        ind_ativ(range: 0..1)
-
-//        logomarca(maxSize: 204800) // max 200k file
     }
 
     def getEnderecoPrincipal() {

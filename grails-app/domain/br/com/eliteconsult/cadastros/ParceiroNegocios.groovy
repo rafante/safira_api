@@ -41,83 +41,11 @@ public class ParceiroNegocios {
     static defaultAutoCompleteFields = "nome;cnpj_cpf"
 
     static constraints = {
-        /**
-         * Nome do Parceiro de Neg�cio
-         * Tamanho 60
-         */
-        nome(size: 0..60, blank: false, nullable: false)
-
-        /**
-         * Apelido (nome fantasia, nome de tratamento)
-         */
-        apelido()
-
-        /**
-         * Tamanho 14
-         * Valida��o de CPF ou CNPJ
-         */
-        cnpj_cpf(size: 0..14, unique: true, validator: { val, obj ->
-            val = val?.trim()
-            // Valida campo vazio
-            if (!val) {
-                if (ParametrosGerais.read(1).cpfCnpjObrigatorio) return false
-            } else if (val) {
-                if (val?.length() == 11) {
-                    if (!Utils.ValidaCpf(val)) return false
-                } else if (val?.length() == 14) {
-                    if (!Utils.ValidaCnpj(val)) return false
-                } else return false
-            }
-
-        })
-
-        /**
-         * Tamanho 14. Realizar valida��o.
-         */
-        inscricao_estadual(size: 0..14, nullable: true)
-        inscricao_municipal(size: 0..14, nullable: true)
-
         endereco_cobranca(cascade: "all-delete-orphan")
         endereco_comercial(cascade: "all-delete-orphan")
         endereco_entrega(cascade: "all-delete-orphan")
         historicoContato(cascade: "all-delete-orphan")
-
-        cliente()
-        fornecedor()
-        representanteVenda()
-        transportadora()
-
-        /**
-         * Valor de cr�dito para compras
-         */
-        credito(scale: 2)
-
-        /**
-         * Percentual de comiss�o do representante
-         */
-        percentual_comissao(size: 0..15, scale: 2)
-        /**
-         * 0 - Comiss�o sob venda.
-         * 1 - Comiss�o sob recebimento.
-         */
-        tipo_comissao()
-
-        /**
-         * 0 - Interno
-         * 1 - Externo
-         */
-        tipo_vendedor(size: 0..7)
-
-        suframa()
-
         historicoContato(cascade: "all-delete-orphan")
-
-        prazo_pagamento_default()
-
-        grupo_parceiro(nullable: true)
-        sub_grupo_parceiro(nullable: true)
-
-        historicoContato(nullable: true)
     }
 
     String getDocumentoFormatado() {

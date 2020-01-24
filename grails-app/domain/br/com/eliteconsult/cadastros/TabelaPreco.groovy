@@ -8,13 +8,6 @@ public class TabelaPreco {
 
     static defaultValueField = "descricao"
 
-    static constraints = {
-        /**
-         * Tamanho 60
-         */
-        descricao()
-    }
-
     String toString() {
         return descricao
     }

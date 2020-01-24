@@ -8,11 +8,4 @@ public class ParametrosGerais {
     Boolean ignoreAjaxLoadingGrid = true
     Boolean ignoreAjaxLoadingSelect = true
 
-    static constraints = {
-        cpfCnpjObrigatorio()
-        ignoreAjaxLoadingFilter()
-        ignoreAjaxLoadingGrid()
-        ignoreAjaxLoadingSelect()
-    }
-
 }

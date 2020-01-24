@@ -6,8 +6,6 @@ public class TipoServico {
 
     static constraints = {
         cod_tipo_servico(unique: true, blank: false, size: 1..5)
-        descricao(size: 0..500)
-
         data_inclusao(shared: "data_inclusao")
         data_ultima_alteracao(shared: "data_ultima_alteracao")
         usuario(shared: "usuario")

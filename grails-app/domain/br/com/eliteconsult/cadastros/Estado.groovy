@@ -10,8 +10,6 @@ class Estado {
     static defaultFilterFields = "nome"
 
     static constraints = {
-        sigla(size: 2..2)
-        nome()
         pais(cascade: 'save-update')
     }
 

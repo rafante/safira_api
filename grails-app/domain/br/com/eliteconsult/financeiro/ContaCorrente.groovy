@@ -22,14 +22,6 @@ class ContaCorrente {
 
     static transients = ['descricaoRel']
 
-    static constraints = {
-        agencia(size: 4..10)
-        codigoCarteira(size: 1..1)
-        codigoComplemento(size: 1..1)
-        codigoTransmissao(size: 1..20)
-
-    }
-
     String getDescricaoRel(){
         return this.toString()
     }

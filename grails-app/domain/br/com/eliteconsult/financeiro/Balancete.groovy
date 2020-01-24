@@ -4,7 +4,4 @@ class Balancete {
 
     Date periodo
     Boolean omiteZerados
-
-    static constraints = {
-    }
 }

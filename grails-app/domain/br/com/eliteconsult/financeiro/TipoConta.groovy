@@ -4,9 +4,6 @@ class TipoConta {
 
     String descricao
 
-    static constraints = {
-    }
-
     @Override
     String toString() {
         return descricao

@@ -19,18 +19,6 @@ abstract class ItemFinanceiroBase {
 
 //    static transients = Persistente.transients + ["valorCompensado", "diasVencimento", "valorDia"]
 
-    static constraints = {
-        item(editable: false)
-        dataVencimento(blank: false, nullable: false)
-        valor(blank: false, nullable: false)
-        multa()
-        juros()
-        descontos()
-        compensadoCompletamente(nullable: false)
-        diasVencimento()
-        formaPagamento()
-    }
-
     protected void beforeValidate() {
         fillNumItem()
     }

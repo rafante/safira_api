@@ -19,18 +19,6 @@ public class ItemMovimentoMaterial {
             materialLote     : MaterialLote,
             unidade_medida   : UnidadeMedida]
 
-    static constraints = {
-        item()
-        material(nullable: false)
-        quantidade(nullable: false, scale: 2)
-        movimentoMaterial(nullable: false)
-        /**
-         * Tamanho 5
-         */
-        unidade_medida(nullable: false)
-        valor(nullable: false, scale: 2)
-    }
-
     def beforeInsert = {
         def maxitem = withCriteria {
             projections { max("item") }

@@ -9,15 +9,6 @@ class Periodicidade {
     int meses
     int anos
 
-    static constraints = {
-        ordem()
-        descricao(size: 0..60)
-        diario()
-        dias()
-        meses()
-        anos()
-    }
-
     String toString() {
         return descricao
     }

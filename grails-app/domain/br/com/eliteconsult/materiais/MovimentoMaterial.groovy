@@ -21,15 +21,6 @@ class MovimentoMaterial {
 
     static hasMany = [itemMovimentoMaterial: ItemMovimentoMaterial]
 
-    static constraints = {
-        data_movimento(nullable: false)
-        observacao()
-        status(blank: false, nullable: false)
-        itemMovimentoMaterial()
-        centroCusto(nullable: false)
-        entrada_saida(nullable: false)
-    }
-
     boolean canEdit() {
         return (status == StatusMovimento.SOLICITACAO)
     }

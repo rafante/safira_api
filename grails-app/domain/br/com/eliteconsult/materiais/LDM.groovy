@@ -8,11 +8,6 @@ public class LDM {
 
     static belongsTo = [material: Material, material_composicao: Material]
 
-    static constraints = {
-        material_composicao(blank: false, nullable: false, asgDefaultFilter: [finalidade: ['\'MATERIA_PRIMA\'', '\'PRODUTO_INTERMEDIARIO\'']])
-        quantidade(scale: 2)
-    }
-
 //    static transients = Persistente.transients + ["custo", "custoTotal"]
 
     String toString() {

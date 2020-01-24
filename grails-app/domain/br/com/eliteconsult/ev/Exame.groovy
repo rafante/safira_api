@@ -20,12 +20,6 @@ class Exame{
     static constraints = {
         codExame(unique: true)
         mnemonico(size: 1..10, unique: true)
-        descricao()
-        precoCusto()
-        precoVenda()
-        ativo()
-        setor()
-        recipiente()
     }
 
     @Override

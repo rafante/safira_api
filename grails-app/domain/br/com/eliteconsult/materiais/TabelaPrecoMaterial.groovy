@@ -15,12 +15,6 @@ public class TabelaPrecoMaterial {
 
     static transients = ["precoSugerido", "precoMinimo"]
 
-    static constraints = {
-        material()
-        tabela()
-        valor(scale: 2)
-    }
-
     String toString() {
         return material?.descricao + "(" + tabela?.descricao + ") ->" +
                 valor

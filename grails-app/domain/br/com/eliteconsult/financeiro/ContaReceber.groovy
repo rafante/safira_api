@@ -16,24 +16,7 @@ class ContaReceber extends FinanceiroBase { //As propriedades da ContaReceber tï
     TipoFinanceiro getTipoFinanceiro() { return TipoFinanceiro.RECEBER }
 
     static constraints = {
-        empresa()
-        referencia()
-        parceiroNegocios(asgDefaultFilter: [cliente: true])
-        centroCusto()
-        planoContas(validator: { val, obj->
-            if(obj?.planoContas?.filhos?.size())
-                return ['financeiro.mensagens.PlanoContasPai']
-            if(obj?.planoContas?.natureza == null)
-                return ['financeiro.mensagens.natureza.invalida']
-            if(obj?.planoContas?.natureza == Natureza.DESPESA)
-                return ['financeiro.mensagens.natureza.nao.permitida']
-        })
-        descricao(blank: false, nullable: false)
-        dataEmissao()
-        dataDocumento()
         itensContaReceber(cascade: 'all-delete-orphan')
-        tipoDocumento()
-        historicoPadrao()
     }
 
     static mapping = {

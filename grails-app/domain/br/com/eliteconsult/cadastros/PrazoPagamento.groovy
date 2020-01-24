@@ -11,14 +11,6 @@ public class PrazoPagamento {
     static defaultValueField = "descricao"
     static defaultFilterFields = "descricao"
 
-    static constraints = {
-        /**
-         * Tamanho 60
-         */
-        descricao(size: 0..60)
-        itemPrazoPagamento()
-    }
-
     String toString() {
         return descricao
     }

@@ -23,21 +23,7 @@ public class ItemEntrada {
     static hasMany = [movimento_material: MovimentoMaterial]
 
     static constraints = {
-        item()
         material(cascade: 'save-update')
-        quantidade(scale: 5)
-
-        /**
-         * Tamanho 5
-         */
-        unidade_medida()
-        valor(scale: 5)
-        icms(scale: 5)
-        ipi(scale: 5)
-        pis(scale: 5)
-        cofins(scale: 5)
-        descontos(scale: 5)
-
         movimento_material(cascade: 'all-delete-orphan')
     }
 

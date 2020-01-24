@@ -10,10 +10,4 @@ class ParametrosEV {
     String examesEncoding = "UTF-8"
     String nfeEncoding = "UTF-8"
     static belongsTo = [planoContas: PlanoContas, contaCorrente: ContaCorrente, centroCusto: CentroCusto]
-
-    static constraints = {
-        planoContas(nullable: true)
-        contaCorrente(nullable: true)
-        centroCusto(nullable: true)
-    }
 }

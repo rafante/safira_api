@@ -18,11 +18,6 @@ abstract class CompensacaoItemFinanceiroBase {
 
     static constraints = {
         estornado(default: false)
-        valor()
-        contaCorrente(nullable: false, blank: false)
-        formaPagamento(nullable: false, blank: false)
-        justificativaEstorno(size: 0..5000)
-        data()
         movimentoFinanceiro(cascade: 'all-delete-orphan')
         cheque(cascade: 'all-delete-orphan')
     }
