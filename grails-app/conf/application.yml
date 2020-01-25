@@ -110,4 +110,7 @@ environments:
             dialect: org.hibernate.dialect.MySQL5InnoDBDialect
             username: safira
             password: SafiraLabApp
-    
+---
+grails:
+    databinding:
+        convertEmptyStringsToNull: false
