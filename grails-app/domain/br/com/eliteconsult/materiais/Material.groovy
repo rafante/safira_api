@@ -63,6 +63,17 @@ public class Material {
             item_exame            : ItemExame
     ]
 
+    static constraints = {
+        ncm(nullable: true)
+        grupo(nullable: true)           
+        sub_grupo(nullable: true)       
+        grupo_tributacao(nullable: true)
+        localizacao(nullable: true)     
+        unidade_medida(nullable: true)  
+        tipo_servico(nullable: true)    
+        ult_doc_ent(nullable: true)     
+    }
+
     static mapping = {
         abaixoEstoqueMinimo formula: 'CASE WHEN estoque < estoque_minimo THEN 1 ELSE 0 END'
         acimaEstoqueMaximo formula: 'CASE WHEN estoque > estoque_maximo THEN 1 ELSE 0 END'
